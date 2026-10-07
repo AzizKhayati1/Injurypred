@@ -1,0 +1,282 @@
+{
+  "generated_at": "2026-10-07T14:50:52+00:00",
+  "model_version": "1.0.0",
+  "build_id": "20261007144806",
+  "reference": {
+    "description": "training-period sample (same calendar months as the window)",
+    "n": 2533,
+    "mode": "seasonal"
+  },
+  "current": {
+    "start": "2026-07-01",
+    "end": "2026-10-06",
+    "n": 8350
+  },
+  "feature_drift": [
+    {
+      "feature": "sprint_distance_vs_baseline_pct",
+      "psi": 1.4393,
+      "status": "alert",
+      "ks_statistic": 0.5136,
+      "ks_pvalue": 4.92e-321,
+      "reference_mean": -3.137,
+      "current_mean": 57.544,
+      "mean_change_pct": 1934.1,
+      "reference_missing_rate": 0.06,
+      "current_missing_rate": 0.015
+    },
+    {
+      "feature": "rpe_mean_7d",
+      "psi": 0.6499,
+      "status": "alert",
+      "ks_statistic": 0.3229,
+      "ks_pvalue": 6.33654881921839e-180,
+      "reference_mean": 5.775,
+      "current_mean": 6.343,
+      "mean_change_pct": 9.8,
+      "reference_missing_rate": 0.0,
+      "current_missing_rate": 0.0022
+    },
+    {
+      "feature": "acwr_total_load",
+      "psi": 0.3596,
+      "status": "alert",
+      "ks_statistic": 0.244,
+      "ks_pvalue": 4.6451604095823125e-102,
+      "reference_mean": 1.026,
+      "current_mean": 1.457,
+      "mean_change_pct": 42.0,
+      "reference_missing_rate": 0.0,
+      "current_missing_rate": 0.0007
+    },
+    {
+      "feature": "acwr_high_speed_load",
+      "psi": 0.3385,
+      "status": "alert",
+      "ks_statistic": 0.2364,
+      "ks_pvalue": 8.509460506810475e-96,
+      "reference_mean": 1.015,
+      "current_mean": 1.453,
+      "mean_change_pct": 43.2,
+      "reference_missing_rate": 0.0,
+      "current_missing_rate": 0.0007
+    },
+    {
+      "feature": "acwr_sprint_load",
+      "psi": 0.3201,
+      "status": "alert",
+      "ks_statistic": 0.225,
+      "ks_pvalue": 9.620033031051144e-87,
+      "reference_mean": 1.045,
+      "current_mean": 1.487,
+      "mean_change_pct": 42.3,
+      "reference_missing_rate": 0.0,
+      "current_missing_rate": 0.0007
+    },
+    {
+      "feature": "high_speed_distance_7d",
+      "psi": 0.1938,
+      "status": "warning",
+      "ks_statistic": 0.1502,
+      "ks_pvalue": 1.0296209730088614e-38,
+      "reference_mean": 1539.602,
+      "current_mean": 1689.206,
+      "mean_change_pct": 9.7,
+      "reference_missing_rate": 0.0,
+      "current_missing_rate": 0.0
+    },
+    {
+      "feature": "duration_7d",
+      "psi": 0.0765,
+      "status": "ok",
+      "ks_statistic": 0.0798,
+      "ks_pvalue": 3.202280166068295e-11,
+      "reference_mean": 360.654,
+      "current_mean": 356.969,
+      "mean_change_pct": -1.0,
+      "reference_missing_rate": 0.0,
+      "current_missing_rate": 0.0
+    },
+    {
+      "feature": "sprint_distance_7d",
+      "psi": 0.0581,
+      "status": "ok",
+      "ks_statistic": 0.0531,
+      "ks_pvalue": 3.3760995136336475e-05,
+      "reference_mean": 430.221,
+      "current_mean": 441.591,
+      "mean_change_pct": 2.6,
+      "reference_missing_rate": 0.0,
+      "current_missing_rate": 0.0
+    },
+    {
+      "feature": "player_load_7d",
+      "psi": 0.0557,
+      "status": "ok",
+      "ks_statistic": 0.0726,
+      "ks_pvalue": 2.381819602351128e-09,
+      "reference_mean": 2827.407,
+      "current_mean": 2829.433,
+      "mean_change_pct": 0.1,
+      "reference_missing_rate": 0.0,
+      "current_missing_rate": 0.0
+    },
+    {
+      "feature": "total_distance_7d",
+      "psi": 0.051,
+      "status": "ok",
+      "ks_statistic": 0.0586,
+      "ks_pvalue": 2.9906338424940162e-06,
+      "reference_mean": 25866.942,
+      "current_mean": 25712.693,
+      "mean_change_pct": -0.6,
+      "reference_missing_rate": 0.0,
+      "current_missing_rate": 0.0
+    }
+  ],
+  "all_feature_psi": {
+    "total_distance_7d": 0.051,
+    "high_speed_distance_7d": 0.1938,
+    "sprint_distance_7d": 0.0581,
+    "sprint_count_7d": 0.048,
+    "accelerations_7d": 0.0637,
+    "decelerations_7d": 0.0571,
+    "player_load_7d": 0.0557,
+    "srpe_load_7d": 0.3635,
+    "duration_7d": 0.0765,
+    "match_minutes_7d": 0.1772,
+    "matches_7d": 0.1643,
+    "sessions_7d": 0.1212,
+    "player_load_14d": 0.1033,
+    "sprint_distance_14d": 0.1636,
+    "high_speed_distance_14d": 0.226,
+    "total_distance_28d": 0.2055,
+    "high_speed_distance_28d": 0.2291,
+    "sprint_distance_28d": 0.3682,
+    "player_load_28d": 0.1908,
+    "srpe_load_28d": 0.3471,
+    "acwr_total_load": 0.3596,
+    "acwr_total_load_uncoupled": 0.2115,
+    "acwr_sprint_load": 0.3201,
+    "acwr_high_speed_load": 0.3385,
+    "acwr_srpe_load": 0.3644,
+    "ewma_acwr_total_load": 0.4832,
+    "ewma_acwr_sprint_load": 0.3561,
+    "ewma_acwr_high_speed_load": 0.4225,
+    "ewma_acute_player_load": 0.0281,
+    "ewma_chronic_player_load": 0.3843,
+    "weekly_load_change": 0.0655,
+    "sprint_load_change": 0.025,
+    "high_speed_load_change": 0.0496,
+    "srpe_load_change": 0.0652,
+    "monotony_7d": 0.0539,
+    "strain_7d": 0.2543,
+    "days_since_last_session": 0.0053,
+    "rest_days_7d": 0.1186,
+    "consecutive_training_days": 0.089,
+    "consecutive_high_load_days": 0.0233,
+    "days_since_last_match": 0.2909,
+    "rpe_mean_7d": 0.6499,
+    "rpe_trend": 0.0562,
+    "baseline_speed": 0.0488,
+    "max_speed_pct_7d": 0.2025,
+    "days_since_near_max_speed": 0.0194,
+    "previous_injury_count": 1.8099,
+    "days_since_previous_injury": 0.0155,
+    "days_since_return": 0.0728,
+    "previous_30d_load": 0.2215,
+    "previous_90d_injury_burden": 0.3057,
+    "injuries_365d": 1.6232,
+    "age": 0.289,
+    "typical_training_load": 0.1925,
+    "position_GK": 0.0,
+    "position_CB": 0.0,
+    "position_FB": 0.0,
+    "position_CM": 0.0,
+    "position_W": 0.0,
+    "position_ST": 0.0,
+    "player_load_vs_baseline_pct": 2.1401,
+    "player_load_vs_baseline_z": 1.622,
+    "total_distance_vs_baseline_pct": 2.091,
+    "total_distance_vs_baseline_z": 1.5624,
+    "high_speed_distance_vs_baseline_pct": 1.9247,
+    "high_speed_distance_vs_baseline_z": 1.7394,
+    "sprint_distance_vs_baseline_pct": 1.4393,
+    "sprint_distance_vs_baseline_z": 0.7115,
+    "duration_vs_baseline_pct": 2.399,
+    "duration_vs_baseline_z": 1.6698,
+    "accelerations_vs_baseline_pct": 2.1077,
+    "accelerations_vs_baseline_z": 1.6868,
+    "player_load_baseline_weekly": 2.793,
+    "high_speed_distance_baseline_weekly": 1.3309,
+    "sprint_distance_baseline_weekly": 1.1124,
+    "scheduled_matches_next_7d": 0.7711
+  },
+  "prediction_drift": {
+    "psi": 0.5129,
+    "reference_mean": 0.0574,
+    "current_mean": 0.0846,
+    "status": "alert"
+  },
+  "data_quality": {
+    "missing_value_increase": [
+      {
+        "feature": "acwr_total_load_uncoupled",
+        "reference_missing_rate": 0.0039,
+        "current_missing_rate": 0.0899
+      },
+      {
+        "feature": "weekly_load_change",
+        "reference_missing_rate": 0.0138,
+        "current_missing_rate": 0.1105
+      },
+      {
+        "feature": "sprint_load_change",
+        "reference_missing_rate": 0.0138,
+        "current_missing_rate": 0.1107
+      },
+      {
+        "feature": "high_speed_load_change",
+        "reference_missing_rate": 0.0138,
+        "current_missing_rate": 0.1105
+      },
+      {
+        "feature": "srpe_load_change",
+        "reference_missing_rate": 0.0138,
+        "current_missing_rate": 0.1105
+      }
+    ]
+  },
+  "label_shift": {
+    "reference_event_rate": 0.0604,
+    "current_event_rate": 0.0887,
+    "z": 4.51,
+    "pvalue": 6.3389145208425646e-06,
+    "n_current_labelled": 7744
+  },
+  "performance": {
+    "current_roc_auc": 0.6616,
+    "reference_test_roc_auc": 0.6494,
+    "roc_auc_drop": -0.0122,
+    "current_brier": 0.0754,
+    "reference_test_brier": 0.0581,
+    "current_mean_predicted": 0.0833,
+    "current_event_rate": 0.0887,
+    "status": "ok",
+    "n_labelled": 7744
+  },
+  "summary": {
+    "overall_status": "alert",
+    "features_alert": 5,
+    "features_warning": 1,
+    "drifted_features": [
+      "sprint_distance_vs_baseline_pct",
+      "rpe_mean_7d",
+      "acwr_total_load",
+      "acwr_high_speed_load",
+      "acwr_sprint_load",
+      "high_speed_distance_7d"
+    ],
+    "recommendation": "Significant input drift detected. Check whether training methodology or data collection changed; monitor performance as labels mature and consider recalibration/retraining."
+  }
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "model_version": "1.0.0",
+    "build_id": "20261007144806",
+    "trained_at": "2026-10-07T14:48:49+00:00",
+    "model_type": "xgboost",
+    "data_fingerprint": "c59f3b070c2d0095",
+    "config_hash": "2394dcf40625",
+    "git_commit": "d80bb54",
+    "mlflow_run_id": "6878adf65dad4b41b5bacd0a558c0673",
+    "test_metrics": {
+      "roc_auc": 0.6494322667844287,
+      "pr_auc": 0.19585292659492792,
+      "brier": 0.05811543624675919
+    }
+  }
+]
