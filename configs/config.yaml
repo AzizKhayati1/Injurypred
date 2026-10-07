@@ -1,0 +1,182 @@
+# =============================================================================
+# PlayerLoad-Risk — central configuration
+# Every pipeline stage (data generation, feature engineering, training,
+# evaluation, serving, monitoring) reads its parameters from this file so that
+# a run is fully described by (config hash, data hash, code commit).
+# =============================================================================
+
+project:
+  name: playerload-risk
+  model_name: playerload-risk-availability-7d
+  model_version: "1.0.0"
+  random_seed: 42
+
+paths:
+  synthetic_dir: data/synthetic
+  processed_dir: data/processed
+  model_dir: models
+  reports_dir: reports
+
+# -----------------------------------------------------------------------------
+# Season calendar (pre-season start → last session). June is the off-season.
+# Used by the generator, by label construction (label windows never cross a
+# season end) and by the temporal splits.
+# -----------------------------------------------------------------------------
+calendar:
+  seasons:
+    - {name: "2024-25", start: "2024-07-01", league_start: "2024-08-17", end: "2025-05-31"}
+    - {name: "2025-26", start: "2025-07-01", league_start: "2025-08-16", end: "2026-05-31"}
+    - {name: "2026-27", start: "2026-07-01", league_start: "2026-08-15", end: "2027-05-31"}
+
+# -----------------------------------------------------------------------------
+# Synthetic data generator (clearly labelled synthetic; see docs/data.md)
+# -----------------------------------------------------------------------------
+synthetic:
+  n_teams: 4
+  athletes_per_team: 25
+  seed: 2024
+  # The generator stops at this date (simulates "data available up to yesterday").
+  data_end: "2026-10-06"
+  winter_break_days: 10
+  # Intentional distribution shift in the current season, used to demonstrate
+  # drift monitoring: two teams adopt a high-speed-running emphasis.
+  drift_scenario:
+    enabled: true
+    season: "2026-27"
+    teams: ["T1", "T3"]
+    hsr_multiplier: 1.25
+    sprint_multiplier: 1.30
+
+# -----------------------------------------------------------------------------
+# Feature engineering
+# -----------------------------------------------------------------------------
+features:
+  acute_window: 7
+  mid_window: 14
+  chronic_window: 28
+  ewma_acute_span: 7          # lambda = 2 / (span + 1)   (Williams et al., 2017)
+  ewma_chronic_span: 28
+  baseline_window: 84         # athlete-specific baseline: trailing 12 weeks …
+  baseline_lag: 7             # … ending 7 days ago (excludes the current acute week)
+  baseline_min_days: 28
+  high_load_quantile: 0.75    # athlete-specific "high-load day" definition
+  burn_in_days: 28            # no prediction rows until 28 days of history exist
+  acwr_floor: 1.0e-6
+  use_fixture_calendar: true  # team fixture list is published in advance
+
+# -----------------------------------------------------------------------------
+# Targets
+# -----------------------------------------------------------------------------
+targets:
+  primary: availability_risk_7d
+  horizons: [7, 14]
+
+# -----------------------------------------------------------------------------
+# Temporal validation (dates are prediction dates t; labels look at (t, t+h])
+# -----------------------------------------------------------------------------
+split:
+  train:      {start: "2024-07-01", end: "2025-05-31"}   # season 1
+  validation: {start: "2025-07-01", end: "2025-12-31"}   # early season 2
+  test:       {start: "2026-01-01", end: "2026-05-31"}   # late season 2
+  production: {start: "2026-07-01", end: "2026-10-06"}   # current season (monitoring)
+  purge_days: 7               # = horizon; rows whose label window crosses a boundary are dropped
+  forward_cv:
+    enabled: true
+    fold_months: ["2025-09", "2025-10", "2025-11", "2025-12", "2026-01", "2026-02", "2026-03", "2026-04"]
+  athlete_holdout_fraction: 0.2
+
+# -----------------------------------------------------------------------------
+# Models
+# -----------------------------------------------------------------------------
+training:
+  selection_metric: pr_auc      # rare-event problem → PR-AUC, Brier as tie-breaker
+  calibration: sigmoid          # sigmoid | isotonic | none   (fit on validation only)
+  models:
+    logistic_regression:
+      enabled: true
+      C: 0.05
+      class_weight: balanced
+      max_iter: 2000
+    random_forest:
+      enabled: true
+      n_estimators: 300
+      max_depth: 10
+      min_samples_leaf: 40
+      max_features: 0.3
+      class_weight: balanced_subsample
+    lightgbm:
+      enabled: true
+      n_estimators: 3000
+      learning_rate: 0.01
+      num_leaves: 7
+      min_child_samples: 300
+      subsample: 0.8
+      subsample_freq: 1
+      colsample_bytree: 0.5
+      reg_lambda: 5.0
+      scale_pos_weight: sqrt     # none | sqrt | auto (= n_neg/n_pos) | <number>
+      early_stopping_rounds: 300 # monitored metric: validation ROC-AUC (calibration-invariant)
+    xgboost:
+      enabled: true
+      n_estimators: 3000
+      learning_rate: 0.01
+      max_depth: 3
+      min_child_weight: 30
+      subsample: 0.8
+      colsample_bytree: 0.5
+      reg_lambda: 5.0
+      scale_pos_weight: sqrt
+      early_stopping_rounds: 300
+    discrete_time_hazard:
+      enabled: true              # pooled-logistic discrete-time survival model
+      C: 0.05
+
+# -----------------------------------------------------------------------------
+# Risk engine
+# -----------------------------------------------------------------------------
+risk:
+  # mode: "relative" → cut points are multiples of the (validation) base rate;
+  #       "absolute" → cut points are probabilities, as written below.
+  mode: relative
+  relative_multipliers:        # p / base_rate
+    MODERATE: 1.5
+    HIGH: 2.5
+    VERY_HIGH: 4.0
+  absolute_thresholds:         # p
+    MODERATE: 0.20
+    HIGH: 0.40
+    VERY_HIGH: 0.70
+  top_k_factors: 5
+
+# -----------------------------------------------------------------------------
+# What-if simulation presets
+# -----------------------------------------------------------------------------
+simulation:
+  presets:
+    - {name: "+10% total load",          total_load_pct: 10}
+    - {name: "+20% sprint load",         sprint_load_pct: 20}
+    - {name: "-20% sprint load",         sprint_load_pct: -20}
+    - {name: "+30% high-speed running",  hsr_pct: 30}
+    - {name: "Reduced session (-30%)",   duration_pct: -30, total_load_pct: -30, sprint_load_pct: -30, hsr_pct: -30}
+    - {name: "Additional recovery day",  rest_day: true}
+
+# -----------------------------------------------------------------------------
+# Monitoring
+# -----------------------------------------------------------------------------
+monitoring:
+  reference_mode: seasonal         # seasonal: same calendar months of the training season | full
+  psi_warning: 0.10
+  psi_alert: 0.25
+  ks_pvalue: 0.01
+  performance_drop_alert: 0.05     # absolute ROC-AUC drop vs. reference
+  features:
+    - total_distance_7d
+    - sprint_distance_7d
+    - high_speed_distance_7d
+    - player_load_7d
+    - acwr_total_load
+    - acwr_sprint_load
+    - acwr_high_speed_load
+    - duration_7d
+    - rpe_mean_7d
+    - sprint_distance_vs_baseline_pct

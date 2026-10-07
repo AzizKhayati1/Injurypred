@@ -1,0 +1,102 @@
+# docker compose up
+#   API        http://localhost:8000   (docs: /docs)
+#   Dashboard  http://localhost:8501
+#   MLflow     http://localhost:5000
+name: playerload-risk
+
+x-app-env: &app-env
+  DATABASE_URL: postgresql+psycopg2://playerload:playerload@db:5432/playerload
+  MLFLOW_TRACKING_URI: http://mlflow:5000
+  MODEL_DIR: /app/models
+  GIT_PYTHON_REFRESH: quiet
+
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: playerload
+      POSTGRES_PASSWORD: playerload
+      POSTGRES_DB: playerload
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U playerload -d playerload"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  mlflow:
+    build: .
+    image: playerload-risk:latest
+    user: root
+    command: >
+      mlflow server --host 0.0.0.0 --port 5000
+      --backend-store-uri sqlite:////mlflow/mlflow.db
+      --artifacts-destination /mlflow/artifacts
+      --serve-artifacts
+      --allowed-hosts "mlflow:5000,mlflow,localhost:5000,localhost,127.0.0.1:5000"
+    volumes:
+      - mlflow_data:/mlflow
+    ports:
+      - "5000:5000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:5000/health')"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+
+  bootstrap:
+    image: playerload-risk:latest
+    command: ["sh", "docker/bootstrap.sh"]
+    environment:
+      <<: *app-env
+      TRAIN_ON_STARTUP: ${TRAIN_ON_STARTUP:-true}
+    volumes:
+      - model_store:/app/models
+      - reports:/app/reports
+    depends_on:
+      db:
+        condition: service_healthy
+      mlflow:
+        condition: service_healthy
+    restart: "no"
+
+  api:
+    image: playerload-risk:latest
+    command: ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8000"]
+    environment: *app-env
+    volumes:
+      - model_store:/app/models
+      - reports:/app/reports
+    ports:
+      - "8000:8000"
+    depends_on:
+      bootstrap:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 20s
+
+  dashboard:
+    image: playerload-risk:latest
+    command: ["streamlit", "run", "dashboard/app.py", "--server.port=8501", "--server.address=0.0.0.0",
+              "--server.headless=true", "--browser.gatherUsageStats=false"]
+    environment:
+      API_URL: http://api:8000
+      DASHBOARD_BACKEND: api
+    ports:
+      - "8501:8501"
+    depends_on:
+      api:
+        condition: service_healthy
+
+volumes:
+  pg_data:
+  mlflow_data:
+  model_store:   # initialised from the image's bundled model on first start
+  reports:

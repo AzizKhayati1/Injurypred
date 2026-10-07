@@ -1,0 +1,24 @@
+[project]
+name = "playerload-risk"
+version = "1.0.0"
+description = "Explainable injury & availability risk modelling from GPS-style workload data (statistical risk, not diagnosis)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+
+[tool.setuptools.packages.find]
+include = ["src*", "api*", "training*", "dashboard*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q --strict-markers"
+filterwarnings = ["ignore::PendingDeprecationWarning", "ignore::DeprecationWarning", "ignore::UserWarning", "ignore::FutureWarning"]
+
+[tool.ruff]
+line-length = 130
+target-version = "py311"
+extend-exclude = ["mlruns", "notebooks"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+ignore = ["B008", "E731", "B905", "UP042"]
