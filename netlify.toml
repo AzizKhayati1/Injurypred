@@ -1,0 +1,41 @@
+# Netlify deploys the static dashboard in web/ (no build step: data is pre-computed by
+# `make web` and committed). The Python API/MLflow stack is not hosted on Netlify — see README.
+#
+# base = "web" keeps Netlify's build out of the repository root, so it does not try to
+# pip-install the ML stack from requirements.txt. `publish` is relative to `base`.
+# web/netlify.toml mirrors this file for setups where the base directory is set in the Netlify UI.
+[build]
+  base = "web"
+  publish = "."
+  command = "echo 'Static site: data pre-exported to web/data by make web'"
+
+# Single-page app: client-side routes (/athletes/A172, /simulator/A172, …) fall back to index.html.
+# Netlify applies rewrites only when no file exists, so real assets are served as-is.
+# Unknown files under /data return a real 404 instead of the app shell.
+[[redirects]]
+  from = "/data/*"
+  to = "/404.json"
+  status = 404
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "DENY"
+
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=300, must-revalidate"
+    Content-Type = "application/json; charset=utf-8"
+
+[[headers]]
+  for = "/vendor/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

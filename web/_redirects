@@ -1,0 +1,3 @@
+# Same rules as netlify.toml, for drag-and-drop deploys of the web/ folder.
+/data/*   /404.json     404
+/*        /index.html   200

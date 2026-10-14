@@ -1,4 +1,4 @@
-.PHONY: help install data validate train evaluate experiments monitor test lint api dashboard docker-up docker-down clean
+.PHONY: help install web web-serve data validate train evaluate experiments monitor test lint api dashboard docker-up docker-down clean
 
 PY ?= python
 
@@ -41,6 +41,12 @@ dashboard:       ## run the dashboard locally on :8501 (uses the API if running,
 
 mlflow-ui:       ## browse local MLflow runs on :5000
 	mlflow ui --backend-store-uri sqlite:///mlflow.db --port 5000
+
+web:             ## export pre-computed data for the static (Netlify) dashboard → web/data
+	$(PY) -m scripts.export_static
+
+web-serve:       ## preview the static site on :8080 with Netlify-like routing
+	$(PY) -m scripts.serve_web
 
 docker-up:       ## full stack: API, dashboard, PostgreSQL, MLflow
 	docker compose up --build

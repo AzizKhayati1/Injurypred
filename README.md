@@ -71,11 +71,52 @@ in MLflow) and writes a drift report → the API starts → the dashboard starts
 is bundled, so if training fails the stack still comes up. Skip re-training with
 `TRAIN_ON_STARTUP=false docker compose up`.
 
+### Netlify (static dashboard, one click)
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/AzizKhayati1/Injurypred)
+
+The `web/` folder is a self-contained single-page dashboard (no build step, no CDN) that Netlify
+serves as-is; `netlify.toml` already sets the base/publish directory (`web`), the SPA rewrite
+rules and headers, and keeps Netlify from trying to install the Python stack. Options:
+
+* **Git deploy** – *Add new site → Import from Git*, pick this repo; Netlify reads `netlify.toml`
+  (base directory `web`, nothing to build). Every push redeploys.
+* **Drag & drop** – drop the `web/` folder onto <https://app.netlify.com/drop>
+  (`web/_redirects` carries the same routing rules).
+* **CLI** – `npx netlify-cli deploy --dir web --prod`.
+
+Netlify hosts static files (its functions run JavaScript/Go), so the Python model does not run
+there: `make web` runs the real pipeline once and writes every view, explanation and what-if
+sweep to `web/data/` (≈ 5 MB, ≈ 1 MB compressed). Re-run it after retraining and commit the
+result. To evaluate arbitrary what-if combinations live, host the FastAPI service elsewhere
+(any Docker host) and set `apiUrl` in `web/config.js`; the simulator then shows a
+"Custom combination (live API)" panel.
+
+Routing uses real URLs that can be bookmarked, shared and reloaded:
+
+| URL | view |
+|---|---|
+| `/squad` (`?team=T1`) | squad overview |
+| `/athletes` (`?team=&pos=&status=&q=`) | searchable, sortable athlete list (filters kept in the URL) |
+| `/athletes/A172` | explained risk estimate, risk history, personal baseline, absences |
+| `/athletes/A172/workload` (`?days=90`) | workload monitor |
+| `/simulator`, `/simulator/A172` (`?dim=sprint_load_pct`) | what-if simulator |
+| `/heatmap` (`?team=&days=28`) | athletes × dates risk heatmap |
+| `/model`, `/about` | performance & drift, methodology |
+
+Preview locally with the same routing rules: `make web-serve` → <http://127.0.0.1:8080>.
+
+| Squad overview | Athlete |
+|---|---|
+| ![](docs/screenshots/web_squad.png) | ![](docs/screenshots/web_athlete.png) |
+| **What-if simulator** | **Mobile** |
+| ![](docs/screenshots/web_simulator.png) | ![](docs/screenshots/web_mobile.png) |
+
 ### Local (Python ≥ 3.11)
 
 ```bash
 pip install -r requirements-dev.txt
-make test          # 94 unit + integration tests
+make test          # 98 unit + integration tests
 make train         # validate → features → 5 models → select → evaluate → register (MLflow, local SQLite)
 make api           # http://localhost:8000/docs
 make dashboard     # http://localhost:8501 (uses the API if running, otherwise in-process)
@@ -396,7 +437,7 @@ to panic-retrain.
 
 ## Testing
 
-`pytest` — 94 tests (≈ 45 s) on a small generated dataset:
+`pytest` — 98 tests (≈ 45 s) on a small generated dataset:
 
 * **workload maths**: rolling windows, coupled/uncoupled/EWMA ACWR, monotony, strain, edge cases
 * **features**: rest/consecutive days, baselines (lagged, absence-aware), burn-in, fixtures
@@ -454,7 +495,10 @@ and calibration with every prediction, and is transparent about its synthetic or
 │   ├── monitoring/         drift & performance monitoring
 │   └── service.py          application service used by API and dashboard
 ├── training/               train.py, evaluate.py, experiments/
+├── scripts/                export_static.py (Netlify data), serve_web.py (local preview)
 ├── tests/                  pytest suite
+├── web/                    static Netlify dashboard (index.html, js/, styles.css, data/, vendor/)
+├── netlify.toml            Netlify publish dir, SPA rewrites, headers
 ├── Dockerfile · docker-compose.yml · Makefile · requirements*.txt · pyproject.toml
 ```
 
