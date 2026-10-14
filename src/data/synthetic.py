@@ -577,6 +577,9 @@ def main() -> None:
     cfg = load_config()
     tables = generate(cfg)
     paths = save(tables, args.out or cfg["paths"]["synthetic_dir"])
+    from src.data.profiles import write_profiles
+
+    write_profiles(args.out or cfg["paths"]["synthetic_dir"])
     summary = summarise(tables)
     logger.info("Synthetic data written: %s", json.dumps(paths, indent=2))
     logger.info("Summary: %s", json.dumps(summary, indent=2))

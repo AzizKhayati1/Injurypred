@@ -23,11 +23,17 @@ def test_netlify_config_spa_fallback():
 
 def test_exported_data_is_complete():
     squad = json.loads((WEB / "data" / "squad.json").read_text())
+    players = json.loads((WEB / "data" / "players.json").read_text())["players"]
+    assert len(players) == len(squad["athletes"]) and all(p["name"] and p["club"]["name"] for p in players)
+    for f in ("clubs.json", "injuries.json"):
+        assert (WEB / "data" / f).exists()
     meta = json.loads((WEB / "data" / "meta.json").read_text())
     assert meta["model"]["data_origin"] == "synthetic"
     for a in squad["athletes"]:
         d = json.loads((WEB / "data" / "athletes" / f"{a['athlete_id']}.json").read_text())
-        assert {"profile", "prediction", "risk_history", "workload", "simulation"} <= set(d)
+        assert {"profile", "player", "prediction", "risk_history", "workload", "simulation", "injuries",
+                "prevention"} <= set(d)
+        assert d["player"]["name"] and d["prevention"]["recommendations"]
         if a["available"]:
             assert d["simulation"] and 0 <= d["prediction"]["risk_probability"] <= 1
 
@@ -36,7 +42,7 @@ def test_every_nav_link_has_a_route():
     html = (WEB / "index.html").read_text()
     app = (WEB / "js" / "app.js").read_text()
     routes = set(re.findall(r'route\("([^"]+)"', app))
-    for href in re.findall(r'href="(/[a-z]*)" data-link', html):
+    for href in re.findall(r'href="(/[a-z-]*)" data-link', html):
         assert href in routes, href
 
 

@@ -1,0 +1,5 @@
+team_id,name,short_name,city,primary_color,secondary_color,founded,league,data_origin
+T1,Northbridge Athletic,NBR,Northbridge,#14284b,#e8b923,1889,PlayerLoad League (fictional),synthetic
+T2,Riverside Rovers,RIV,Riverside,#0b6e4f,#ffffff,1902,PlayerLoad League (fictional),synthetic
+T3,Harbour City FC,HCF,Harbour City,#5fa8e0,#0a2240,1921,PlayerLoad League (fictional),synthetic
+T4,Kingsford United,KIN,Kingsford,#7a1f3d,#9fc5e8,1894,PlayerLoad League (fictional),synthetic

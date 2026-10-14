@@ -1,0 +1,715 @@
+absence_id,athlete_id,diagnosis_code,diagnosis,body_region,body_zone,side,tissue,mechanism,severity,onset_date,return_date,recurrence,data_origin
+X00070,A101,QUA,Quadriceps muscle injury (grade 1),Anterior thigh,thigh_front,Left,muscle,sprinting,Minimal,2024-10-12,2024-10-17,,synthetic
+X00328,A101,QUA,Quadriceps muscle injury (grade 1),Anterior thigh,thigh_front,Left,muscle,kicking,Minimal,2025-07-30,2025-08-03,Late recurrence,synthetic
+X00336,A101,SYN,Ankle syndesmosis sprain,Ankle,ankle,Left,ligament,external rotation,Severe,2025-08-09,2025-11-21,,synthetic
+X00453,A101,TCO,Thigh contusion,Anterior thigh,thigh_front,Right,contusion,collision,Minimal,2025-12-06,2025-12-11,,synthetic
+X00463,A101,ACO,Ankle/foot contusion,Foot / ankle,foot,Right,contusion,tackle,Slight,2025-12-20,2025-12-23,,synthetic
+X00490,A101,ADD,Adductor muscle injury (grade 1),Groin / adductors,groin,Right,muscle,kicking,Mild,2026-01-31,2026-02-10,,synthetic
+X00520,A101,QUA,Quadriceps muscle injury (grade 1),Anterior thigh,thigh_front,Right,muscle,kicking,Minimal,2026-03-01,2026-03-05,,synthetic
+X00549,A101,ACH,Achilles tendinopathy,Achilles,achilles,Right,tendon,gradual onset,Mild,2026-04-04,2026-04-15,,synthetic
+X00709,A101,HAM,Hamstring muscle injury (grade 3),Posterior thigh,thigh_back,Left,muscle,sprinting,Moderate,2026-10-03,2026-11-12,,synthetic
+X00428,A102,QUA,Quadriceps muscle injury (grade 2),Anterior thigh,thigh_front,Right,muscle,sprinting,Mild,2025-11-13,2025-11-27,,synthetic
+X00012,A103,QUA,Quadriceps muscle injury (grade 2),Anterior thigh,thigh_front,Right,muscle,acceleration,Mild,2024-08-06,2024-08-31,,synthetic
+X00193,A103,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2025-03-04,2025-03-07,,synthetic
+X00365,A103,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2025-09-12,2025-09-13,,synthetic
+X00410,A103,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2025-10-28,2025-10-31,,synthetic
+X00429,A103,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2025-11-13,2025-11-19,,synthetic
+X00529,A103,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Minimal,2026-03-11,2026-03-16,,synthetic
+X00137,A104,ACH,Achilles tendinopathy,Achilles,achilles,Left,tendon,gradual onset,Mild,2024-12-21,2024-12-29,,synthetic
+X00229,A104,CAL,Calf muscle injury (grade 1),Calf,calf,Right,muscle,sprinting,Mild,2025-04-05,2025-04-14,,synthetic
+X00276,A104,QUA,Quadriceps muscle injury (grade 1),Anterior thigh,thigh_front,Left,muscle,acceleration,Minimal,2025-05-24,2025-05-29,,synthetic
+X00515,A104,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Right,muscle,sprinting,Minimal,2026-02-27,2026-03-04,,synthetic
+X00568,A104,ADD,Adductor muscle injury (grade 2),Groin / adductors,groin,Left,muscle,change of direction,Mild,2026-04-25,2026-05-13,,synthetic
+X00594,A104,QUA,Quadriceps muscle injury (grade 3),Anterior thigh,thigh_front,Right,muscle,acceleration,Moderate,2026-05-23,2026-06-28,,synthetic
+X00617,A104,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Right,muscle,sprinting,Moderate,2026-07-13,2026-08-14,Late recurrence,synthetic
+X00674,A104,ACH,Achilles tendinopathy,Achilles,achilles,Right,tendon,gradual onset,Slight,2026-08-29,2026-09-01,,synthetic
+X00685,A104,ACO,Ankle/foot contusion,Foot / ankle,foot,Right,contusion,tackle,Slight,2026-09-05,2026-09-08,,synthetic
+X00697,A104,ANK,Ankle sprain (lateral ligament),Ankle,ankle,Left,ligament,landing,Mild,2026-09-16,2026-09-27,,synthetic
+X00272,A105,PAT,Patellar tendinopathy,Knee,knee,Left,tendon,gradual onset,Minimal,2025-05-17,2025-05-21,,synthetic
+X00363,A105,QUA,Quadriceps muscle injury (grade 1),Anterior thigh,thigh_front,Left,muscle,sprinting,Minimal,2025-09-07,2025-09-11,,synthetic
+X00495,A105,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2026-02-03,2026-02-07,,synthetic
+X00681,A105,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2026-09-02,2026-09-06,,synthetic
+X00077,A106,GRO,Adductor-related groin pain,Groin / adductors,groin,Right,tendon,gradual onset,Slight,2024-10-18,2024-10-20,,synthetic
+X00305,A106,ACO,Ankle/foot contusion,Foot / ankle,foot,Right,contusion,stamp,Slight,2025-07-19,2025-07-21,,synthetic
+X00419,A106,ACH,Achilles tendinopathy,Achilles,achilles,Left,tendon,gradual onset,Minimal,2025-11-07,2025-11-11,,synthetic
+X00462,A106,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Slight,2025-12-18,2025-12-21,,synthetic
+X00548,A106,PAT,Patellar tendinopathy,Knee,knee,Left,tendon,gradual onset,Mild,2026-04-02,2026-04-11,,synthetic
+X00605,A106,MCL,Knee MCL sprain,Knee,knee,Right,ligament,change of direction,Mild,2026-07-04,2026-07-17,,synthetic
+X00652,A106,MEN,Knee meniscal injury,Knee,knee,Left,bone/joint,twisting,Mild,2026-08-08,2026-08-26,,synthetic
+X00088,A107,ANK,Ankle sprain (lateral ligament),Ankle,ankle,Right,ligament,landing,Mild,2024-10-26,2024-11-09,,synthetic
+X00559,A107,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Slight,2026-04-15,2026-04-16,,synthetic
+X00618,A107,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Slight,2026-07-13,2026-07-14,,synthetic
+X00622,A107,MCL,Knee MCL sprain,Knee,knee,Left,ligament,change of direction,Moderate,2026-07-14,2026-08-19,,synthetic
+X00686,A107,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Right,muscle,sprinting,Minimal,2026-09-05,2026-09-09,,synthetic
+X00015,A108,SYN,Ankle syndesmosis sprain,Ankle,ankle,Right,ligament,external rotation,Slight,2024-08-14,2024-08-17,,synthetic
+X00071,A108,TCO,Thigh contusion,Anterior thigh,thigh_front,Right,contusion,tackle,Mild,2024-10-12,2024-10-22,,synthetic
+X00204,A108,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Minimal,2025-03-15,2025-03-19,,synthetic
+X00277,A108,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Left,muscle,sprinting,Mild,2025-05-24,2025-06-05,,synthetic
+X00293,A108,QUA,Quadriceps muscle injury (grade 2),Anterior thigh,thigh_front,Right,muscle,sprinting,Mild,2025-07-10,2025-07-26,,synthetic
+X00348,A108,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2025-08-25,2025-08-29,,synthetic
+X00452,A108,CAL,Calf muscle injury (grade 1),Calf,calf,Right,muscle,sprinting,Minimal,2025-12-04,2025-12-10,,synthetic
+X00528,A108,CAL,Calf muscle injury (grade 2),Calf,calf,Right,muscle,acceleration,Mild,2026-03-08,2026-03-26,Late recurrence,synthetic
+X00560,A108,GRO,Adductor-related groin pain,Groin / adductors,groin,Right,tendon,gradual onset,Slight,2026-04-15,2026-04-18,,synthetic
+X00587,A108,CAL,Calf muscle injury (grade 2),Calf,calf,Right,muscle,acceleration,Mild,2026-05-12,2026-05-25,Early recurrence,synthetic
+X00105,A109,CAL,Calf muscle injury (grade 2),Calf,calf,Left,muscle,jumping,Mild,2024-11-16,2024-12-08,,synthetic
+X00143,A109,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Left,muscle,high-speed running,Moderate,2025-01-05,2025-02-04,,synthetic
+X00187,A109,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Left,muscle,sprinting,Mild,2025-02-22,2025-03-09,Early recurrence,synthetic
+X00212,A109,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Left,muscle,sprinting,Mild,2025-03-22,2025-03-30,Early recurrence,synthetic
+X00249,A109,MCL,Knee MCL sprain,Knee,knee,Left,ligament,valgus loading,Moderate,2025-04-26,2025-06-26,,synthetic
+X00301,A109,QUA,Quadriceps muscle injury (grade 1),Anterior thigh,thigh_front,Right,muscle,acceleration,Minimal,2025-07-15,2025-07-21,,synthetic
+X00340,A109,CAL,Calf muscle injury (grade 1),Calf,calf,Left,muscle,acceleration,Mild,2025-08-16,2025-08-25,Late recurrence,synthetic
+X00601,A109,MCL,Knee MCL sprain,Knee,knee,Left,ligament,contact,Mild,2026-07-01,2026-07-27,,synthetic
+X00653,A109,ACH,Achilles tendinopathy,Achilles,achilles,Right,tendon,gradual onset,Mild,2026-08-08,2026-08-16,,synthetic
+X00023,A110,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2024-08-25,2024-08-31,,synthetic
+X00144,A110,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Left,muscle,sprinting,Mild,2025-01-08,2025-01-24,,synthetic
+X00175,A110,PAT,Patellar tendinopathy,Knee,knee,Right,tendon,gradual onset,Mild,2025-02-11,2025-02-21,,synthetic
+X00299,A110,ADD,Adductor muscle injury (grade 1),Groin / adductors,groin,Right,muscle,change of direction,Minimal,2025-07-12,2025-07-16,,synthetic
+X00366,A110,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2025-09-12,2025-09-18,,synthetic
+X00380,A110,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Minimal,2025-09-25,2025-09-30,,synthetic
+X00534,A110,ANK,Ankle sprain (lateral ligament),Ankle,ankle,Right,ligament,contact,Mild,2026-03-18,2026-03-27,,synthetic
+X00611,A110,QUA,Quadriceps muscle injury (grade 1),Anterior thigh,thigh_front,Right,muscle,kicking,Minimal,2026-07-09,2026-07-15,,synthetic
+X00710,A110,TCO,Thigh contusion,Anterior thigh,thigh_front,Right,contusion,collision,Slight,2026-10-03,2026-10-04,,synthetic
+X00180,A111,ADD,Adductor muscle injury (grade 1),Groin / adductors,groin,Left,muscle,kicking,Minimal,2025-02-15,2025-02-21,,synthetic
+X00221,A111,CAL,Calf muscle injury (grade 1),Calf,calf,Left,muscle,sprinting,Minimal,2025-03-29,2025-04-03,,synthetic
+X00455,A111,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Left,muscle,sprinting,Minimal,2025-12-07,2025-12-11,,synthetic
+X00481,A111,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Right,muscle,sprinting,Mild,2026-01-14,2026-01-25,,synthetic
+X00487,A111,VIR,Viral illness / fever,Systemic,systemic,,systemic,illness,Slight,2026-01-27,2026-01-28,,synthetic
+X00053,A112,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Right,muscle,overstretching,Mild,2024-09-28,2024-10-11,,synthetic
+X00130,A112,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2024-12-14,2024-12-19,,synthetic
+X00350,A112,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Minimal,2025-08-30,2025-09-05,,synthetic
+X00358,A112,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Left,muscle,sprinting,Mild,2025-09-06,2025-09-24,,synthetic
+X00420,A112,QUA,Quadriceps muscle injury (grade 2),Anterior thigh,thigh_front,Right,muscle,sprinting,Mild,2025-11-07,2025-11-21,,synthetic
+X00654,A112,TCO,Thigh contusion,Anterior thigh,thigh_front,Left,contusion,collision,Minimal,2026-08-08,2026-08-12,,synthetic
+X00392,A113,VIR,Viral illness / fever,Systemic,systemic,,systemic,illness,Minimal,2025-10-06,2025-10-12,,synthetic
+X00431,A113,VIR,Viral illness / fever,Systemic,systemic,,systemic,illness,Slight,2025-11-15,2025-11-18,,synthetic
+X00524,A113,MCL,Knee MCL sprain,Knee,knee,Right,ligament,valgus loading,Minimal,2026-03-07,2026-03-13,,synthetic
+X00626,A113,SYN,Ankle syndesmosis sprain,Ankle,ankle,Right,ligament,contact,Slight,2026-07-17,2026-07-19,,synthetic
+X00258,A114,CAL,Calf muscle injury (grade 1),Calf,calf,Left,muscle,jumping,Mild,2025-05-03,2025-05-13,,synthetic
+X00395,A114,ADD,Adductor muscle injury (grade 2),Groin / adductors,groin,Right,muscle,change of direction,Mild,2025-10-11,2025-10-26,,synthetic
+X00422,A114,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Right,muscle,overstretching,Mild,2025-11-08,2025-11-18,,synthetic
+X00467,A114,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Right,muscle,sprinting,Slight,2025-12-21,2025-12-24,Early recurrence,synthetic
+X00646,A114,PAT,Patellar tendinopathy,Knee,knee,Left,tendon,gradual onset,Minimal,2026-08-01,2026-08-06,,synthetic
+X00679,A114,VIR,Viral illness / fever,Systemic,systemic,,systemic,illness,Minimal,2026-08-30,2026-09-03,,synthetic
+X00044,A115,ACO,Ankle/foot contusion,Foot / ankle,foot,Right,contusion,stamp,Mild,2024-09-25,2024-10-05,,synthetic
+X00079,A115,ACO,Ankle/foot contusion,Foot / ankle,foot,Right,contusion,tackle,Mild,2024-10-19,2024-10-28,Early recurrence,synthetic
+X00128,A115,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2024-12-12,2024-12-14,,synthetic
+X00146,A115,CON,Concussion,Head,head,,brain,head collision,Moderate,2025-01-11,2025-02-17,,synthetic
+X00411,A115,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2025-10-30,2025-11-05,,synthetic
+X00432,A115,CON,Concussion,Head,head,,brain,head collision,Slight,2025-11-15,2025-11-17,,synthetic
+X00538,A115,ACO,Ankle/foot contusion,Foot / ankle,foot,Right,contusion,tackle,Minimal,2026-03-21,2026-03-27,,synthetic
+X00542,A116,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2026-03-26,2026-03-28,,synthetic
+X00220,A117,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2025-03-28,2025-03-29,,synthetic
+X00550,A117,SYN,Ankle syndesmosis sprain,Ankle,ankle,Right,ligament,contact,Moderate,2026-04-04,2026-05-29,,synthetic
+X00643,A117,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Minimal,2026-07-28,2026-08-01,,synthetic
+X00176,A118,CAL,Calf muscle injury (grade 1),Calf,calf,Left,muscle,acceleration,Minimal,2025-02-11,2025-02-17,,synthetic
+X00491,A118,CON,Concussion,Head,head,,brain,head collision,Mild,2026-01-31,2026-02-08,,synthetic
+X00673,A118,MEN,Knee meniscal injury,Knee,knee,Right,bone/joint,change of direction,Mild,2026-08-26,2026-09-20,,synthetic
+X00039,A119,ADD,Adductor muscle injury (grade 3),Groin / adductors,groin,Left,muscle,overstretching,Moderate,2024-09-19,2024-11-08,,synthetic
+X00111,A119,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Left,muscle,sprinting,Mild,2024-11-23,2024-12-20,,synthetic
+X00140,A119,ADD,Adductor muscle injury (grade 1),Groin / adductors,groin,Left,muscle,change of direction,Minimal,2025-01-04,2025-01-11,Early recurrence,synthetic
+X00160,A119,HAM,Hamstring muscle injury (grade 3),Posterior thigh,thigh_back,Left,muscle,sprinting,Moderate,2025-01-25,2025-04-04,Early recurrence,synthetic
+X00246,A119,PAT,Patellar tendinopathy,Knee,knee,Right,tendon,gradual onset,Minimal,2025-04-23,2025-04-27,,synthetic
+X00259,A119,ACO,Ankle/foot contusion,Foot / ankle,foot,Right,contusion,stamp,Moderate,2025-05-03,2025-06-10,,synthetic
+X00302,A119,QUA,Quadriceps muscle injury (grade 2),Anterior thigh,thigh_front,Left,muscle,sprinting,Mild,2025-07-17,2025-07-29,,synthetic
+X00346,A119,ADD,Adductor muscle injury (grade 2),Groin / adductors,groin,Right,muscle,overstretching,Mild,2025-08-23,2025-09-12,,synthetic
+X00464,A119,ANK,Ankle sprain (lateral ligament),Ankle,ankle,Left,ligament,contact,Slight,2025-12-20,2025-12-22,,synthetic
+X00482,A119,TCO,Thigh contusion,Anterior thigh,thigh_front,Left,contusion,tackle,Minimal,2026-01-14,2026-01-19,,synthetic
+X00147,A120,CON,Concussion,Head,head,,brain,fall,Mild,2025-01-11,2025-01-22,,synthetic
+X00351,A120,TCO,Thigh contusion,Anterior thigh,thigh_front,Left,contusion,tackle,Mild,2025-08-30,2025-09-16,,synthetic
+X00402,A120,QUA,Quadriceps muscle injury (grade 2),Anterior thigh,thigh_front,Right,muscle,kicking,Moderate,2025-10-18,2025-11-21,,synthetic
+X00458,A120,ACO,Ankle/foot contusion,Foot / ankle,foot,Right,contusion,stamp,Slight,2025-12-13,2025-12-16,,synthetic
+X00680,A120,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Slight,2026-08-30,2026-08-31,,synthetic
+X00058,A121,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Slight,2024-10-01,2024-10-03,,synthetic
+X00062,A121,ACH,Achilles tendinopathy,Achilles,achilles,Left,tendon,gradual onset,Minimal,2024-10-05,2024-10-11,,synthetic
+X00145,A121,CAL,Calf muscle injury (grade 1),Calf,calf,Left,muscle,acceleration,Minimal,2025-01-10,2025-01-14,,synthetic
+X00262,A121,TCO,Thigh contusion,Anterior thigh,thigh_front,Left,contusion,tackle,Moderate,2025-05-10,2025-07-05,,synthetic
+X00303,A121,QUA,Quadriceps muscle injury (grade 1),Anterior thigh,thigh_front,Left,muscle,acceleration,Mild,2025-07-17,2025-07-27,,synthetic
+X00337,A121,CON,Concussion,Head,head,,brain,fall,Mild,2025-08-09,2025-08-20,,synthetic
+X00367,A121,GRO,Adductor-related groin pain,Groin / adductors,groin,Left,tendon,gradual onset,Mild,2025-09-12,2025-09-29,,synthetic
+X00513,A121,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Slight,2026-02-23,2026-02-26,,synthetic
+X00525,A121,CAL,Calf muscle injury (grade 3),Calf,calf,Left,muscle,sprinting,Moderate,2026-03-07,2026-04-12,,synthetic
+X00609,A121,GRO,Adductor-related groin pain,Groin / adductors,groin,Left,tendon,gradual onset,Slight,2026-07-07,2026-07-10,Late recurrence,synthetic
+X00636,A121,MCL,Knee MCL sprain,Knee,knee,Left,ligament,valgus loading,Moderate,2026-07-23,2026-10-08,,synthetic
+X00100,A122,CAL,Calf muscle injury (grade 1),Calf,calf,Left,muscle,jumping,Minimal,2024-11-09,2024-11-14,,synthetic
+X00222,A122,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2025-03-29,2025-03-30,,synthetic
+X00236,A122,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2025-04-11,2025-04-12,,synthetic
+X00248,A122,CAL,Calf muscle injury (grade 1),Calf,calf,Left,muscle,acceleration,Slight,2025-04-25,2025-04-26,Late recurrence,synthetic
+X00287,A122,CAL,Calf muscle injury (grade 1),Calf,calf,Left,muscle,jumping,Slight,2025-07-04,2025-07-07,Late recurrence,synthetic
+X00388,A122,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2025-10-04,2025-10-09,,synthetic
+X00543,A122,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Slight,2026-03-27,2026-03-30,,synthetic
+X00055,A123,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2024-09-29,2024-10-03,,synthetic
+X00116,A123,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2024-11-27,2024-11-29,,synthetic
+X00228,A123,ACH,Achilles tendinopathy,Achilles,achilles,Right,tendon,gradual onset,Mild,2025-04-04,2025-04-20,,synthetic
+X00269,A123,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Left,muscle,high-speed running,Mild,2025-05-15,2025-06-03,,synthetic
+X00668,A123,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2026-08-22,2026-08-24,,synthetic
+X00672,A123,CAL,Calf muscle injury (grade 2),Calf,calf,Right,muscle,sprinting,Moderate,2026-08-25,2026-09-23,,synthetic
+X00386,A124,ACH,Achilles tendinopathy,Achilles,achilles,Right,tendon,gradual onset,Minimal,2025-10-02,2025-10-07,,synthetic
+X00441,A124,TCO,Thigh contusion,Anterior thigh,thigh_front,Left,contusion,collision,Mild,2025-11-22,2025-12-11,,synthetic
+X00483,A124,ACH,Achilles tendinopathy,Achilles,achilles,Left,tendon,gradual onset,Minimal,2026-01-17,2026-01-21,,synthetic
+X00156,A125,ACH,Achilles tendinopathy,Achilles,achilles,Right,tendon,gradual onset,Mild,2025-01-20,2025-01-31,,synthetic
+X00173,A125,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2025-02-09,2025-02-14,,synthetic
+X00223,A125,MCL,Knee MCL sprain,Knee,knee,Left,ligament,contact,Mild,2025-03-29,2025-04-11,,synthetic
+X00247,A125,QUA,Quadriceps muscle injury (grade 2),Anterior thigh,thigh_front,Right,muscle,acceleration,Mild,2025-04-23,2025-05-06,,synthetic
+X00284,A125,MCL,Knee MCL sprain,Knee,knee,Right,ligament,change of direction,Mild,2025-07-01,2025-07-18,,synthetic
+X00318,A125,QUA,Quadriceps muscle injury (grade 1),Anterior thigh,thigh_front,Right,muscle,sprinting,Mild,2025-07-26,2025-08-04,Late recurrence,synthetic
+X00352,A125,QUA,Quadriceps muscle injury (grade 2),Anterior thigh,thigh_front,Right,muscle,acceleration,Moderate,2025-08-30,2025-10-04,Early recurrence,synthetic
+X00404,A125,MCL,Knee MCL sprain,Knee,knee,Right,ligament,change of direction,Mild,2025-10-19,2025-10-27,Late recurrence,synthetic
+X00413,A125,ACO,Ankle/foot contusion,Foot / ankle,foot,Right,contusion,stamp,Mild,2025-11-01,2025-11-09,,synthetic
+X00442,A125,CON,Concussion,Head,head,,brain,head collision,Mild,2025-11-22,2025-12-07,,synthetic
+X00502,A125,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2026-02-13,2026-02-15,,synthetic
+X00042,A126,GRO,Adductor-related groin pain,Groin / adductors,groin,Left,tendon,gradual onset,Minimal,2024-09-22,2024-09-29,,synthetic
+X00073,A126,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Left,muscle,high-speed running,Mild,2024-10-16,2024-11-13,,synthetic
+X00112,A126,SYN,Ankle syndesmosis sprain,Ankle,ankle,Left,ligament,external rotation,Severe,2024-11-23,2025-03-03,,synthetic
+X00205,A126,TCO,Thigh contusion,Anterior thigh,thigh_front,Left,contusion,collision,Slight,2025-03-15,2025-03-18,,synthetic
+X00213,A126,QUA,Quadriceps muscle injury (grade 2),Anterior thigh,thigh_front,Right,muscle,kicking,Mild,2025-03-22,2025-04-16,,synthetic
+X00260,A126,QUA,Quadriceps muscle injury (grade 2),Anterior thigh,thigh_front,Left,muscle,acceleration,Mild,2025-05-03,2025-05-26,,synthetic
+X00300,A126,QUA,Quadriceps muscle injury (grade 2),Anterior thigh,thigh_front,Right,muscle,kicking,Mild,2025-07-14,2025-07-26,Late recurrence,synthetic
+X00338,A126,CON,Concussion,Head,head,,brain,head collision,Slight,2025-08-09,2025-08-11,,synthetic
+X00544,A126,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Left,muscle,high-speed running,Mild,2026-04-01,2026-04-11,,synthetic
+X00282,A127,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2025-05-29,2025-05-30,,synthetic
+X00552,A127,ANK,Ankle sprain (lateral ligament),Ankle,ankle,Right,ligament,change of direction,Mild,2026-04-07,2026-04-29,,synthetic
+X00583,A127,GRO,Adductor-related groin pain,Groin / adductors,groin,Right,tendon,gradual onset,Slight,2026-05-03,2026-05-05,,synthetic
+X00610,A127,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Right,muscle,high-speed running,Mild,2026-07-08,2026-07-23,,synthetic
+X00701,A127,MCL,Knee MCL sprain,Knee,knee,Left,ligament,change of direction,Mild,2026-09-21,2026-10-07,,synthetic
+X00043,A128,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2024-09-24,2024-09-28,,synthetic
+X00097,A128,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2024-11-03,2024-11-09,,synthetic
+X00274,A128,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2025-05-18,2025-05-23,,synthetic
+X00281,A128,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2025-05-26,2025-05-28,,synthetic
+X00584,A128,MCL,Knee MCL sprain,Knee,knee,Right,ligament,change of direction,Mild,2026-05-05,2026-05-17,,synthetic
+X00615,A128,GRO,Adductor-related groin pain,Groin / adductors,groin,Right,tendon,gradual onset,Mild,2026-07-11,2026-07-24,,synthetic
+X00693,A128,CON,Concussion,Head,head,,brain,fall,Mild,2026-09-12,2026-09-21,,synthetic
+X00024,A129,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Slight,2024-08-25,2024-08-27,,synthetic
+X00061,A129,MCL,Knee MCL sprain,Knee,knee,Left,ligament,valgus loading,Minimal,2024-10-04,2024-10-10,,synthetic
+X00106,A129,MCL,Knee MCL sprain,Knee,knee,Left,ligament,contact,Slight,2024-11-16,2024-11-17,Early recurrence,synthetic
+X00239,A129,TCO,Thigh contusion,Anterior thigh,thigh_front,Left,contusion,tackle,Slight,2025-04-16,2025-04-19,,synthetic
+X00264,A129,ANK,Ankle sprain (lateral ligament),Ankle,ankle,Left,ligament,contact,Mild,2025-05-11,2025-06-08,,synthetic
+X00306,A129,ACO,Ankle/foot contusion,Foot / ankle,foot,Left,contusion,stamp,Minimal,2025-07-19,2025-07-26,,synthetic
+X00427,A129,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Left,muscle,high-speed running,Mild,2025-11-12,2025-11-22,,synthetic
+X00575,A129,QUA,Quadriceps muscle injury (grade 1),Anterior thigh,thigh_front,Left,muscle,sprinting,Minimal,2026-04-30,2026-05-06,,synthetic
+X00038,A130,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Slight,2024-09-16,2024-09-18,,synthetic
+X00138,A130,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2024-12-26,2025-01-01,,synthetic
+X00141,A130,MCL,Knee MCL sprain,Knee,knee,Left,ligament,change of direction,Moderate,2025-01-04,2025-03-04,,synthetic
+X00214,A130,ACO,Ankle/foot contusion,Foot / ankle,foot,Right,contusion,tackle,Minimal,2025-03-22,2025-03-28,,synthetic
+X00237,A130,MCL,Knee MCL sprain,Knee,knee,Left,ligament,change of direction,Moderate,2025-04-12,2025-06-12,Early recurrence,synthetic
+X00316,A130,CAL,Calf muscle injury (grade 3),Calf,calf,Right,muscle,acceleration,Moderate,2025-07-23,2025-09-16,,synthetic
+X00382,A130,SYN,Ankle syndesmosis sprain,Ankle,ankle,Right,ligament,contact,Moderate,2025-09-27,2025-12-07,,synthetic
+X00472,A130,ADD,Adductor muscle injury (grade 2),Groin / adductors,groin,Right,muscle,overstretching,Mild,2026-01-03,2026-01-17,,synthetic
+X00492,A130,CON,Concussion,Head,head,,brain,fall,Minimal,2026-01-31,2026-02-06,,synthetic
+X00624,A130,CAL,Calf muscle injury (grade 1),Calf,calf,Left,muscle,sprinting,Mild,2026-07-16,2026-07-25,,synthetic
+X00660,A130,RIB,Rib/chest contusion,Chest,chest,Right,contusion,collision,Minimal,2026-08-15,2026-08-19,,synthetic
+X00017,A131,RIB,Rib/chest contusion,Chest,chest,Left,contusion,collision,Moderate,2024-08-17,2024-09-16,,synthetic
+X00078,A131,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2024-10-18,2024-10-19,,synthetic
+X00099,A131,PAT,Patellar tendinopathy,Knee,knee,Left,tendon,gradual onset,Minimal,2024-11-08,2024-11-13,,synthetic
+X00319,A131,ANK,Ankle sprain (lateral ligament),Ankle,ankle,Left,ligament,landing,Mild,2025-07-26,2025-08-07,,synthetic
+X00521,A131,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Left,muscle,overstretching,Minimal,2026-03-01,2026-03-07,,synthetic
+X00545,A131,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2026-04-01,2026-04-05,,synthetic
+X00564,A131,ANK,Ankle sprain (lateral ligament),Ankle,ankle,Left,ligament,landing,Minimal,2026-04-18,2026-04-22,Late recurrence,synthetic
+X00623,A131,CAL,Calf muscle injury (grade 1),Calf,calf,Left,muscle,sprinting,Minimal,2026-07-15,2026-07-21,,synthetic
+X00082,A132,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2024-10-20,2024-10-25,,synthetic
+X00398,A132,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2025-10-12,2025-10-17,,synthetic
+X00586,A132,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2026-05-11,2026-05-15,,synthetic
+X00707,A132,GRO,Adductor-related groin pain,Groin / adductors,groin,Right,tendon,gradual onset,Minimal,2026-10-01,2026-10-06,,synthetic
+X00121,A133,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2024-12-01,2024-12-04,,synthetic
+X00150,A133,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2025-01-16,2025-01-19,,synthetic
+X00164,A133,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Minimal,2025-01-31,2025-02-04,,synthetic
+X00210,A133,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2025-03-21,2025-03-23,,synthetic
+X00314,A133,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Minimal,2025-07-22,2025-07-27,,synthetic
+X00417,A133,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2025-11-05,2025-11-07,,synthetic
+X00433,A133,VIR,Viral illness / fever,Systemic,systemic,,systemic,illness,Slight,2025-11-15,2025-11-17,,synthetic
+X00501,A133,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Slight,2026-02-09,2026-02-11,,synthetic
+X00613,A133,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Slight,2026-07-10,2026-07-11,,synthetic
+X00014,A134,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2024-08-10,2024-08-13,,synthetic
+X00151,A134,GRO,Adductor-related groin pain,Groin / adductors,groin,Right,tendon,gradual onset,Minimal,2025-01-16,2025-01-23,,synthetic
+X00405,A134,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2025-10-19,2025-10-21,,synthetic
+X00434,A134,QUA,Quadriceps muscle injury (grade 1),Anterior thigh,thigh_front,Right,muscle,acceleration,Mild,2025-11-15,2025-11-25,,synthetic
+X00576,A134,ACO,Ankle/foot contusion,Foot / ankle,foot,Left,contusion,tackle,Minimal,2026-05-02,2026-05-08,,synthetic
+X00033,A135,ADD,Adductor muscle injury (grade 1),Groin / adductors,groin,Left,muscle,change of direction,Minimal,2024-09-14,2024-09-20,,synthetic
+X00224,A135,ACH,Achilles tendinopathy,Achilles,achilles,Left,tendon,gradual onset,Mild,2025-03-29,2025-04-08,,synthetic
+X00406,A135,ADD,Adductor muscle injury (grade 1),Groin / adductors,groin,Left,muscle,kicking,Mild,2025-10-22,2025-11-01,,synthetic
+X00516,A135,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2026-02-28,2026-03-03,,synthetic
+X00553,A135,QUA,Quadriceps muscle injury (grade 1),Anterior thigh,thigh_front,Left,muscle,sprinting,Mild,2026-04-08,2026-04-17,,synthetic
+X00577,A135,TCO,Thigh contusion,Anterior thigh,thigh_front,Right,contusion,collision,Moderate,2026-05-02,2026-06-03,,synthetic
+X00627,A135,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2026-07-17,2026-07-19,,synthetic
+X00468,A136,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2025-12-24,2025-12-29,,synthetic
+X00687,A136,GRO,Adductor-related groin pain,Groin / adductors,groin,Left,tendon,gradual onset,Mild,2026-09-05,2026-09-20,,synthetic
+X00401,A137,PAT,Patellar tendinopathy,Knee,knee,Right,tendon,gradual onset,Minimal,2025-10-14,2025-10-18,,synthetic
+X00238,A138,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2025-04-12,2025-04-16,,synthetic
+X00265,A138,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Left,muscle,overstretching,Mild,2025-05-14,2025-05-30,,synthetic
+X00041,A139,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Right,muscle,sprinting,Mild,2024-09-21,2024-09-30,,synthetic
+X00123,A139,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2024-12-07,2024-12-09,,synthetic
+X00153,A139,QUA,Quadriceps muscle injury (grade 1),Anterior thigh,thigh_front,Right,muscle,acceleration,Slight,2025-01-18,2025-01-21,,synthetic
+X00245,A139,ACH,Achilles tendinopathy,Achilles,achilles,Left,tendon,gradual onset,Slight,2025-04-22,2025-04-24,,synthetic
+X00374,A139,VIR,Viral illness / fever,Systemic,systemic,,systemic,illness,Slight,2025-09-20,2025-09-22,,synthetic
+X00010,A140,GRO,Adductor-related groin pain,Groin / adductors,groin,Right,tendon,gradual onset,Slight,2024-07-30,2024-07-31,,synthetic
+X00045,A140,ACO,Ankle/foot contusion,Foot / ankle,foot,Left,contusion,stamp,Mild,2024-09-25,2024-10-04,,synthetic
+X00471,A140,VIR,Viral illness / fever,Systemic,systemic,,systemic,illness,Slight,2026-01-02,2026-01-03,,synthetic
+X00573,A140,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2026-04-29,2026-05-03,,synthetic
+X00630,A140,ADD,Adductor muscle injury (grade 2),Groin / adductors,groin,Left,muscle,overstretching,Moderate,2026-07-18,2026-08-18,,synthetic
+X00703,A140,SYN,Ankle syndesmosis sprain,Ankle,ankle,Left,ligament,external rotation,Minimal,2026-09-22,2026-09-27,,synthetic
+X00101,A141,CON,Concussion,Head,head,,brain,head collision,Moderate,2024-11-09,2024-12-22,,synthetic
+X00148,A141,TCO,Thigh contusion,Anterior thigh,thigh_front,Right,contusion,collision,Mild,2025-01-11,2025-02-05,,synthetic
+X00190,A141,HAM,Hamstring muscle injury (grade 3),Posterior thigh,thigh_back,Right,muscle,high-speed running,Moderate,2025-03-01,2025-04-13,,synthetic
+X00240,A141,SYN,Ankle syndesmosis sprain,Ankle,ankle,Right,ligament,external rotation,Mild,2025-04-18,2025-04-30,,synthetic
+X00320,A141,ACO,Ankle/foot contusion,Foot / ankle,foot,Right,contusion,tackle,Slight,2025-07-26,2025-07-27,,synthetic
+X00329,A141,ACH,Achilles tendinopathy,Achilles,achilles,Right,tendon,gradual onset,Minimal,2025-07-31,2025-08-05,,synthetic
+X00535,A141,ANK,Ankle sprain (lateral ligament),Ankle,ankle,Right,ligament,landing,Mild,2026-03-18,2026-04-13,,synthetic
+X00574,A141,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2026-04-29,2026-04-30,,synthetic
+X00066,A142,QUA,Quadriceps muscle injury (grade 1),Anterior thigh,thigh_front,Right,muscle,sprinting,Mild,2024-10-08,2024-10-17,,synthetic
+X00107,A142,ANK,Ankle sprain (lateral ligament),Ankle,ankle,Right,ligament,landing,Mild,2024-11-17,2024-11-27,,synthetic
+X00250,A142,CAL,Calf muscle injury (grade 1),Calf,calf,Right,muscle,acceleration,Minimal,2025-04-26,2025-05-02,,synthetic
+X00271,A142,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Right,muscle,overstretching,Mild,2025-05-16,2025-06-04,,synthetic
+X00606,A142,PAT,Patellar tendinopathy,Knee,knee,Right,tendon,gradual onset,Mild,2026-07-06,2026-07-20,,synthetic
+X00051,A143,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2024-09-26,2024-09-27,,synthetic
+X00124,A143,QUA,Quadriceps muscle injury (grade 1),Anterior thigh,thigh_front,Right,muscle,acceleration,Minimal,2024-12-08,2024-12-13,,synthetic
+X00251,A143,ADD,Adductor muscle injury (grade 1),Groin / adductors,groin,Left,muscle,change of direction,Minimal,2025-04-26,2025-05-03,,synthetic
+X00364,A143,MCL,Knee MCL sprain,Knee,knee,Right,ligament,change of direction,Severe,2025-09-11,2026-02-05,,synthetic
+X00509,A143,ANK,Ankle sprain (lateral ligament),Ankle,ankle,Right,ligament,landing,Moderate,2026-02-20,2026-03-25,,synthetic
+X00554,A143,ACO,Ankle/foot contusion,Foot / ankle,foot,Right,contusion,stamp,Mild,2026-04-08,2026-04-21,,synthetic
+X00591,A143,GRO,Adductor-related groin pain,Groin / adductors,groin,Right,tendon,gradual onset,Slight,2026-05-17,2026-05-20,,synthetic
+X00004,A144,PAT,Patellar tendinopathy,Knee,knee,Right,tendon,gradual onset,Minimal,2024-07-11,2024-07-15,,synthetic
+X00059,A144,ACO,Ankle/foot contusion,Foot / ankle,foot,Right,contusion,tackle,Minimal,2024-10-02,2024-10-08,,synthetic
+X00091,A144,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2024-10-30,2024-11-01,,synthetic
+X00188,A144,CAL,Calf muscle injury (grade 1),Calf,calf,Left,muscle,jumping,Mild,2025-02-22,2025-03-03,,synthetic
+X00278,A144,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Right,muscle,sprinting,Mild,2025-05-24,2025-06-10,,synthetic
+X00421,A144,SYN,Ankle syndesmosis sprain,Ankle,ankle,Right,ligament,external rotation,Moderate,2025-11-07,2025-12-06,,synthetic
+X00628,A144,GRO,Adductor-related groin pain,Groin / adductors,groin,Right,tendon,gradual onset,Mild,2026-07-17,2026-08-01,,synthetic
+X00704,A144,ACO,Ankle/foot contusion,Foot / ankle,foot,Right,contusion,stamp,Mild,2026-09-26,2026-10-06,,synthetic
+X00034,A145,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Right,muscle,sprinting,Mild,2024-09-14,2024-09-26,,synthetic
+X00113,A145,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Right,muscle,sprinting,Minimal,2024-11-23,2024-11-29,Early recurrence,synthetic
+X00157,A145,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Right,muscle,sprinting,Mild,2025-01-22,2025-01-30,Early recurrence,synthetic
+X00165,A145,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Left,muscle,high-speed running,Mild,2025-02-01,2025-02-25,,synthetic
+X00206,A145,CON,Concussion,Head,head,,brain,head collision,Minimal,2025-03-15,2025-03-19,,synthetic
+X00215,A145,QUA,Quadriceps muscle injury (grade 2),Anterior thigh,thigh_front,Right,muscle,acceleration,Mild,2025-03-22,2025-04-13,,synthetic
+X00241,A145,ADD,Adductor muscle injury (grade 1),Groin / adductors,groin,Right,muscle,overstretching,Mild,2025-04-19,2025-04-27,,synthetic
+X00263,A145,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Right,muscle,sprinting,Mild,2025-05-10,2025-05-21,Late recurrence,synthetic
+X00341,A145,CAL,Calf muscle injury (grade 1),Calf,calf,Right,muscle,sprinting,Minimal,2025-08-16,2025-08-21,,synthetic
+X00372,A145,ANK,Ankle sprain (lateral ligament),Ankle,ankle,Right,ligament,contact,Mild,2025-09-14,2025-09-25,,synthetic
+X00530,A145,CAL,Calf muscle injury (grade 1),Calf,calf,Right,muscle,jumping,Minimal,2026-03-11,2026-03-16,Late recurrence,synthetic
+X00546,A145,MEN,Knee meniscal injury,Knee,knee,Right,bone/joint,change of direction,Mild,2026-04-01,2026-04-22,,synthetic
+X00585,A145,MCL,Knee MCL sprain,Knee,knee,Right,ligament,contact,Mild,2026-05-05,2026-05-13,,synthetic
+X00631,A145,ACO,Ankle/foot contusion,Foot / ankle,foot,Right,contusion,stamp,Mild,2026-07-18,2026-08-04,,synthetic
+X00669,A145,TCO,Thigh contusion,Anterior thigh,thigh_front,Right,contusion,tackle,Minimal,2026-08-22,2026-08-26,,synthetic
+X00029,A146,TCO,Thigh contusion,Anterior thigh,thigh_front,Left,contusion,tackle,Moderate,2024-09-07,2024-10-10,,synthetic
+X00110,A146,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Left,muscle,high-speed running,Mild,2024-11-20,2024-12-08,,synthetic
+X00166,A146,CON,Concussion,Head,head,,brain,head collision,Slight,2025-02-01,2025-02-03,,synthetic
+X00294,A146,PAT,Patellar tendinopathy,Knee,knee,Left,tendon,gradual onset,Mild,2025-07-10,2025-07-18,,synthetic
+X00384,A146,VIR,Viral illness / fever,Systemic,systemic,,systemic,illness,Slight,2025-09-28,2025-09-30,,synthetic
+X00393,A146,ANK,Ankle sprain (lateral ligament),Ankle,ankle,Right,ligament,landing,Minimal,2025-10-10,2025-10-17,,synthetic
+X00460,A146,PAT,Patellar tendinopathy,Knee,knee,Left,tendon,gradual onset,Minimal,2025-12-16,2025-12-21,Late recurrence,synthetic
+X00593,A146,MCL,Knee MCL sprain,Knee,knee,Right,ligament,valgus loading,Mild,2026-05-21,2026-06-12,,synthetic
+X00283,A147,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Minimal,2025-05-31,2025-06-06,,synthetic
+X00443,A147,VIR,Viral illness / fever,Systemic,systemic,,systemic,illness,Minimal,2025-11-26,2025-12-01,,synthetic
+X00011,A148,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Right,muscle,high-speed running,Mild,2024-08-03,2024-08-22,,synthetic
+X00054,A148,TCO,Thigh contusion,Anterior thigh,thigh_front,Left,contusion,tackle,Moderate,2024-09-28,2024-11-18,,synthetic
+X00131,A148,QUA,Quadriceps muscle injury (grade 3),Anterior thigh,thigh_front,Right,muscle,sprinting,Moderate,2024-12-14,2025-01-30,,synthetic
+X00181,A148,RIB,Rib/chest contusion,Chest,chest,Right,contusion,collision,Minimal,2025-02-15,2025-02-22,,synthetic
+X00191,A148,PAT,Patellar tendinopathy,Knee,knee,Right,tendon,gradual onset,Slight,2025-03-02,2025-03-05,,synthetic
+X00211,A148,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2025-03-21,2025-03-25,,synthetic
+X00227,A148,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2025-03-31,2025-04-03,,synthetic
+X00242,A148,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Left,muscle,high-speed running,Minimal,2025-04-19,2025-04-24,,synthetic
+X00266,A148,ADD,Adductor muscle injury (grade 1),Groin / adductors,groin,Right,muscle,kicking,Minimal,2025-05-14,2025-05-18,,synthetic
+X00389,A148,CAL,Calf muscle injury (grade 1),Calf,calf,Right,muscle,acceleration,Minimal,2025-10-04,2025-10-08,,synthetic
+X00399,A148,CAL,Calf muscle injury (grade 2),Calf,calf,Left,muscle,acceleration,Mild,2025-10-12,2025-10-30,,synthetic
+X00484,A148,ACO,Ankle/foot contusion,Foot / ankle,foot,Right,contusion,tackle,Minimal,2026-01-17,2026-01-21,,synthetic
+X00496,A148,GRO,Adductor-related groin pain,Groin / adductors,groin,Right,tendon,gradual onset,Minimal,2026-02-06,2026-02-13,,synthetic
+X00507,A148,PAT,Patellar tendinopathy,Knee,knee,Right,tendon,gradual onset,Mild,2026-02-17,2026-03-06,Late recurrence,synthetic
+X00539,A148,RIB,Rib/chest contusion,Chest,chest,Left,contusion,collision,Mild,2026-03-21,2026-04-18,,synthetic
+X00578,A148,RIB,Rib/chest contusion,Chest,chest,Right,contusion,collision,Mild,2026-05-02,2026-05-12,,synthetic
+X00683,A148,VIR,Viral illness / fever,Systemic,systemic,,systemic,illness,Slight,2026-09-03,2026-09-06,,synthetic
+X00695,A148,CAL,Calf muscle injury (grade 2),Calf,calf,Left,muscle,jumping,Moderate,2026-09-15,2026-10-17,Late recurrence,synthetic
+X00013,A149,QUA,Quadriceps muscle injury (grade 2),Anterior thigh,thigh_front,Left,muscle,kicking,Moderate,2024-08-07,2024-09-06,,synthetic
+X00046,A149,RIB,Rib/chest contusion,Chest,chest,Left,contusion,collision,Mild,2024-09-25,2024-10-12,,synthetic
+X00117,A149,CON,Concussion,Head,head,,brain,head collision,Moderate,2024-11-30,2025-01-20,,synthetic
+X00182,A149,QUA,Quadriceps muscle injury (grade 1),Anterior thigh,thigh_front,Right,muscle,acceleration,Minimal,2025-02-15,2025-02-22,,synthetic
+X00285,A149,HAM,Hamstring muscle injury (grade 3),Posterior thigh,thigh_back,Right,muscle,sprinting,Moderate,2025-07-02,2025-08-27,,synthetic
+X00359,A149,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2025-09-06,2025-09-07,,synthetic
+X00369,A149,ANK,Ankle sprain (lateral ligament),Ankle,ankle,Right,ligament,change of direction,Moderate,2025-09-13,2025-10-14,,synthetic
+X00403,A149,SYN,Ankle syndesmosis sprain,Ankle,ankle,Right,ligament,contact,Moderate,2025-10-18,2025-12-04,,synthetic
+X00456,A149,ADD,Adductor muscle injury (grade 1),Groin / adductors,groin,Right,muscle,change of direction,Minimal,2025-12-09,2025-12-16,,synthetic
+X00465,A149,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2025-12-20,2025-12-26,,synthetic
+X00473,A149,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Right,muscle,overstretching,Mild,2026-01-03,2026-01-23,Late recurrence,synthetic
+X00497,A149,ACO,Ankle/foot contusion,Foot / ankle,foot,Right,contusion,stamp,Moderate,2026-02-07,2026-03-24,,synthetic
+X00562,A149,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Right,muscle,high-speed running,Minimal,2026-04-16,2026-04-23,Late recurrence,synthetic
+X00579,A149,ADD,Adductor muscle injury (grade 2),Groin / adductors,groin,Left,muscle,kicking,Mild,2026-05-02,2026-05-13,,synthetic
+X00629,A149,VIR,Viral illness / fever,Systemic,systemic,,systemic,illness,Slight,2026-07-17,2026-07-19,,synthetic
+X00025,A150,QUA,Quadriceps muscle injury (grade 2),Anterior thigh,thigh_front,Right,muscle,kicking,Mild,2024-08-31,2024-09-26,,synthetic
+X00158,A150,ADD,Adductor muscle injury (grade 2),Groin / adductors,groin,Left,muscle,overstretching,Mild,2025-01-22,2025-02-05,,synthetic
+X00174,A150,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2025-02-09,2025-02-12,,synthetic
+X00252,A150,TCO,Thigh contusion,Anterior thigh,thigh_front,Left,contusion,tackle,Moderate,2025-04-26,2025-05-25,,synthetic
+X00290,A150,PAT,Patellar tendinopathy,Knee,knee,Left,tendon,gradual onset,Minimal,2025-07-08,2025-07-12,,synthetic
+X00307,A150,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Left,muscle,high-speed running,Minimal,2025-07-19,2025-07-24,,synthetic
+X00342,A150,QUA,Quadriceps muscle injury (grade 2),Anterior thigh,thigh_front,Left,muscle,kicking,Mild,2025-08-16,2025-09-07,,synthetic
+X00377,A150,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Left,muscle,sprinting,Slight,2025-09-23,2025-09-24,Early recurrence,synthetic
+X00396,A150,PAT,Patellar tendinopathy,Knee,knee,Left,tendon,gradual onset,Mild,2025-10-11,2025-10-21,Late recurrence,synthetic
+X00563,A150,MEN,Knee meniscal injury,Knee,knee,Left,bone/joint,twisting,Mild,2026-04-17,2026-05-11,,synthetic
+X00619,A150,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Left,muscle,high-speed running,Slight,2026-07-13,2026-07-16,Late recurrence,synthetic
+X00008,A151,RIB,Rib/chest contusion,Chest,chest,Left,contusion,collision,Minimal,2024-07-20,2024-07-26,,synthetic
+X00018,A151,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2024-08-17,2024-08-18,,synthetic
+X00022,A151,ADD,Adductor muscle injury (grade 1),Groin / adductors,groin,Left,muscle,change of direction,Minimal,2024-08-24,2024-08-30,,synthetic
+X00031,A151,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Right,muscle,sprinting,Mild,2024-09-09,2024-09-26,,synthetic
+X00136,A151,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2024-12-20,2024-12-22,,synthetic
+X00510,A151,GRO,Adductor-related groin pain,Groin / adductors,groin,Right,tendon,gradual onset,Mild,2026-02-21,2026-03-07,,synthetic
+X00331,A152,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Slight,2025-08-05,2025-08-08,,synthetic
+X00684,A152,QUA,Quadriceps muscle injury (grade 1),Anterior thigh,thigh_front,Right,muscle,kicking,Minimal,2026-09-04,2026-09-11,,synthetic
+X00155,A153,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Minimal,2025-01-19,2025-01-23,,synthetic
+X00032,A154,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Left,muscle,overstretching,Mild,2024-09-11,2024-09-23,,synthetic
+X00080,A154,ACO,Ankle/foot contusion,Foot / ankle,foot,Right,contusion,stamp,Minimal,2024-10-19,2024-10-24,,synthetic
+X00231,A154,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Left,muscle,high-speed running,Mild,2025-04-06,2025-04-16,Late recurrence,synthetic
+X00279,A154,ANK,Ankle sprain (lateral ligament),Ankle,ankle,Left,ligament,landing,Mild,2025-05-24,2025-06-21,,synthetic
+X00334,A154,ACH,Achilles tendinopathy,Achilles,achilles,Left,tendon,gradual onset,Minimal,2025-08-07,2025-08-12,,synthetic
+X00480,A154,VIR,Viral illness / fever,Systemic,systemic,,systemic,illness,Slight,2026-01-12,2026-01-13,,synthetic
+X00541,A154,GRO,Adductor-related groin pain,Groin / adductors,groin,Right,tendon,gradual onset,Minimal,2026-03-22,2026-03-28,,synthetic
+X00170,A155,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Left,muscle,high-speed running,Mild,2025-02-08,2025-02-20,,synthetic
+X00449,A155,QUA,Quadriceps muscle injury (grade 1),Anterior thigh,thigh_front,Left,muscle,kicking,Mild,2025-12-03,2025-12-11,,synthetic
+X00486,A155,ANK,Ankle sprain (lateral ligament),Ankle,ankle,Left,ligament,contact,Mild,2026-01-25,2026-02-18,,synthetic
+X00603,A155,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Left,muscle,sprinting,Mild,2026-07-02,2026-07-21,,synthetic
+X00655,A155,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Right,muscle,high-speed running,Slight,2026-08-08,2026-08-11,,synthetic
+X00661,A155,SYN,Ankle syndesmosis sprain,Ankle,ankle,Right,ligament,external rotation,Severe,2026-08-15,2026-11-22,,synthetic
+X00114,A156,CON,Concussion,Head,head,,brain,fall,Minimal,2024-11-23,2024-11-27,,synthetic
+X00126,A156,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2024-12-11,2024-12-17,,synthetic
+X00195,A156,MCL,Knee MCL sprain,Knee,knee,Left,ligament,valgus loading,Mild,2025-03-08,2025-03-16,,synthetic
+X00225,A156,ACO,Ankle/foot contusion,Foot / ankle,foot,Right,contusion,tackle,Minimal,2025-03-29,2025-04-02,,synthetic
+X00556,A156,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Minimal,2026-04-10,2026-04-16,,synthetic
+X00690,A156,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2026-09-09,2026-09-14,,synthetic
+X00706,A156,GRO,Adductor-related groin pain,Groin / adductors,groin,Right,tendon,gradual onset,Minimal,2026-09-30,2026-10-05,,synthetic
+X00074,A157,CAL,Calf muscle injury (grade 1),Calf,calf,Left,muscle,jumping,Minimal,2024-10-16,2024-10-21,,synthetic
+X00083,A157,ACH,Achilles tendinopathy,Achilles,achilles,Right,tendon,gradual onset,Mild,2024-10-22,2024-11-01,,synthetic
+X00132,A157,ADD,Adductor muscle injury (grade 3),Groin / adductors,groin,Left,muscle,kicking,Moderate,2024-12-14,2025-01-30,,synthetic
+X00177,A157,PAT,Patellar tendinopathy,Knee,knee,Left,tendon,gradual onset,Mild,2025-02-12,2025-02-24,,synthetic
+X00288,A157,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2025-07-05,2025-07-09,,synthetic
+X00308,A157,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Left,muscle,high-speed running,Mild,2025-07-19,2025-08-02,,synthetic
+X00344,A157,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Slight,2025-08-18,2025-08-20,,synthetic
+X00076,A158,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Minimal,2024-10-17,2024-10-22,,synthetic
+X00656,A158,TCO,Thigh contusion,Anterior thigh,thigh_front,Right,contusion,tackle,Mild,2026-08-08,2026-08-19,,synthetic
+X00109,A159,SYN,Ankle syndesmosis sprain,Ankle,ankle,Left,ligament,external rotation,Severe,2024-11-19,2025-03-12,,synthetic
+X00200,A159,VIR,Viral illness / fever,Systemic,systemic,,systemic,illness,Slight,2025-03-14,2025-03-16,,synthetic
+X00216,A159,HAM,Hamstring muscle injury (grade 3),Posterior thigh,thigh_back,Right,muscle,high-speed running,Moderate,2025-03-22,2025-05-11,,synthetic
+X00280,A159,TCO,Thigh contusion,Anterior thigh,thigh_front,Right,contusion,tackle,Mild,2025-05-24,2025-06-12,,synthetic
+X00291,A159,ADD,Adductor muscle injury (grade 1),Groin / adductors,groin,Left,muscle,change of direction,Minimal,2025-07-09,2025-07-15,,synthetic
+X00309,A159,TCO,Thigh contusion,Anterior thigh,thigh_front,Left,contusion,tackle,Minimal,2025-07-19,2025-07-25,,synthetic
+X00321,A159,ADD,Adductor muscle injury (grade 1),Groin / adductors,groin,Left,muscle,overstretching,Minimal,2025-07-26,2025-07-31,Early recurrence,synthetic
+X00332,A159,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Right,muscle,sprinting,Mild,2025-08-05,2025-08-15,Late recurrence,synthetic
+X00347,A159,TCO,Thigh contusion,Anterior thigh,thigh_front,Left,contusion,tackle,Mild,2025-08-23,2025-09-20,Early recurrence,synthetic
+X00383,A159,RIB,Rib/chest contusion,Chest,chest,Right,contusion,collision,Minimal,2025-09-27,2025-10-03,,synthetic
+X00397,A159,ANK,Ankle sprain (lateral ligament),Ankle,ankle,Right,ligament,contact,Mild,2025-10-11,2025-10-29,,synthetic
+X00435,A159,CAL,Calf muscle injury (grade 1),Calf,calf,Left,muscle,jumping,Slight,2025-11-15,2025-11-16,,synthetic
+X00437,A159,ACH,Achilles tendinopathy,Achilles,achilles,Right,tendon,gradual onset,Mild,2025-11-19,2025-11-27,,synthetic
+X00511,A159,QUA,Quadriceps muscle injury (grade 2),Anterior thigh,thigh_front,Right,muscle,kicking,Mild,2026-02-21,2026-03-14,,synthetic
+X00547,A159,MCL,Knee MCL sprain,Knee,knee,Right,ligament,valgus loading,Moderate,2026-04-01,2026-05-12,,synthetic
+X00595,A159,ANK,Ankle sprain (lateral ligament),Ankle,ankle,Right,ligament,landing,Mild,2026-05-23,2026-06-08,Late recurrence,synthetic
+X00616,A159,ANK,Ankle sprain (lateral ligament),Ankle,ankle,Right,ligament,change of direction,Mild,2026-07-11,2026-07-22,Early recurrence,synthetic
+X00638,A159,TCO,Thigh contusion,Anterior thigh,thigh_front,Left,contusion,collision,Slight,2026-07-25,2026-07-27,Late recurrence,synthetic
+X00647,A159,HAM,Hamstring muscle injury (grade 3),Posterior thigh,thigh_back,Left,muscle,overstretching,Moderate,2026-08-01,2026-10-17,,synthetic
+X00026,A160,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Right,muscle,high-speed running,Slight,2024-08-31,2024-09-01,,synthetic
+X00040,A160,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2024-09-20,2024-09-26,,synthetic
+X00196,A160,ADD,Adductor muscle injury (grade 2),Groin / adductors,groin,Right,muscle,overstretching,Mild,2025-03-08,2025-03-30,,synthetic
+X00304,A160,MCL,Knee MCL sprain,Knee,knee,Right,ligament,change of direction,Moderate,2025-07-17,2025-08-29,,synthetic
+X00375,A160,TCO,Thigh contusion,Anterior thigh,thigh_front,Right,contusion,tackle,Minimal,2025-09-20,2025-09-27,,synthetic
+X00390,A160,ACO,Ankle/foot contusion,Foot / ankle,foot,Left,contusion,stamp,Slight,2025-10-04,2025-10-06,,synthetic
+X00504,A160,ACO,Ankle/foot contusion,Foot / ankle,foot,Left,contusion,stamp,Minimal,2026-02-14,2026-02-18,Late recurrence,synthetic
+X00580,A160,GRO,Adductor-related groin pain,Groin / adductors,groin,Right,tendon,gradual onset,Mild,2026-05-02,2026-05-10,,synthetic
+X00596,A160,GRO,Adductor-related groin pain,Groin / adductors,groin,Left,tendon,gradual onset,Mild,2026-05-23,2026-06-04,,synthetic
+X00644,A160,ADD,Adductor muscle injury (grade 1),Groin / adductors,groin,Left,muscle,overstretching,Mild,2026-07-29,2026-08-07,,synthetic
+X00028,A161,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Right,muscle,sprinting,Mild,2024-09-04,2024-09-13,,synthetic
+X00047,A161,CAL,Calf muscle injury (grade 1),Calf,calf,Right,muscle,acceleration,Slight,2024-09-25,2024-09-27,,synthetic
+X00085,A161,GRO,Adductor-related groin pain,Groin / adductors,groin,Right,tendon,gradual onset,Mild,2024-10-23,2024-11-01,,synthetic
+X00189,A161,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2025-02-26,2025-03-04,,synthetic
+X00243,A161,MCL,Knee MCL sprain,Knee,knee,Right,ligament,contact,Mild,2025-04-19,2025-05-08,,synthetic
+X00356,A161,MEN,Knee meniscal injury,Knee,knee,Right,bone/joint,change of direction,Moderate,2025-09-04,2025-10-16,,synthetic
+X00423,A161,ANK,Ankle sprain (lateral ligament),Ankle,ankle,Right,ligament,contact,Mild,2025-11-08,2025-11-28,,synthetic
+X00207,A162,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Right,muscle,sprinting,Slight,2025-03-15,2025-03-18,,synthetic
+X00217,A162,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Right,muscle,overstretching,Mild,2025-03-22,2025-03-30,Early recurrence,synthetic
+X00357,A162,MCL,Knee MCL sprain,Knee,knee,Right,ligament,change of direction,Mild,2025-09-04,2025-09-16,,synthetic
+X00503,A162,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Right,muscle,sprinting,Mild,2026-02-13,2026-02-22,Late recurrence,synthetic
+X00588,A162,ACO,Ankle/foot contusion,Foot / ankle,foot,Right,contusion,tackle,Slight,2026-05-16,2026-05-17,,synthetic
+X00607,A162,QUA,Quadriceps muscle injury (grade 2),Anterior thigh,thigh_front,Left,muscle,kicking,Mild,2026-07-06,2026-07-19,,synthetic
+X00639,A162,QUA,Quadriceps muscle injury (grade 2),Anterior thigh,thigh_front,Right,muscle,acceleration,Mild,2026-07-25,2026-08-08,,synthetic
+X00670,A162,CON,Concussion,Head,head,,brain,fall,Minimal,2026-08-22,2026-08-26,,synthetic
+X00035,A163,CAL,Calf muscle injury (grade 2),Calf,calf,Right,muscle,acceleration,Mild,2024-09-14,2024-10-01,,synthetic
+X00065,A163,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2024-10-07,2024-10-12,,synthetic
+X00081,A163,MEN,Knee meniscal injury,Knee,knee,Right,bone/joint,twisting,Severe,2024-10-19,2025-01-18,,synthetic
+X00163,A163,ANK,Ankle sprain (lateral ligament),Ankle,ankle,Right,ligament,contact,Mild,2025-01-30,2025-02-07,,synthetic
+X00183,A163,HAM,Hamstring muscle injury (grade 3),Posterior thigh,thigh_back,Right,muscle,overstretching,Moderate,2025-02-15,2025-04-07,,synthetic
+X00297,A163,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Left,muscle,high-speed running,Mild,2025-07-11,2025-07-24,,synthetic
+X00407,A163,RIB,Rib/chest contusion,Chest,chest,Right,contusion,collision,Minimal,2025-10-25,2025-10-29,,synthetic
+X00438,A163,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Right,muscle,sprinting,Mild,2025-11-19,2025-12-09,Late recurrence,synthetic
+X00517,A163,ADD,Adductor muscle injury (grade 2),Groin / adductors,groin,Left,muscle,overstretching,Mild,2026-02-28,2026-03-14,,synthetic
+X00600,A163,CAL,Calf muscle injury (grade 1),Calf,calf,Right,muscle,acceleration,Mild,2026-05-30,2026-06-08,,synthetic
+X00657,A163,ADD,Adductor muscle injury (grade 1),Groin / adductors,groin,Right,muscle,change of direction,Mild,2026-08-08,2026-08-17,,synthetic
+X00671,A163,TCO,Thigh contusion,Anterior thigh,thigh_front,Left,contusion,tackle,Slight,2026-08-22,2026-08-24,,synthetic
+X00009,A164,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Left,muscle,sprinting,Slight,2024-07-25,2024-07-27,,synthetic
+X00086,A164,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2024-10-23,2024-10-25,,synthetic
+X00475,A164,CAL,Calf muscle injury (grade 2),Calf,calf,Left,muscle,sprinting,Mild,2026-01-08,2026-01-29,,synthetic
+X00555,A164,ADD,Adductor muscle injury (grade 1),Groin / adductors,groin,Right,muscle,kicking,Minimal,2026-04-08,2026-04-14,,synthetic
+X00572,A164,QUA,Quadriceps muscle injury (grade 1),Anterior thigh,thigh_front,Left,muscle,kicking,Mild,2026-04-26,2026-05-06,,synthetic
+X00662,A164,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2026-08-17,2026-08-20,,synthetic
+X00312,A165,VIR,Viral illness / fever,Systemic,systemic,,systemic,illness,Slight,2025-07-21,2025-07-24,,synthetic
+X00349,A165,CAL,Calf muscle injury (grade 2),Calf,calf,Left,muscle,acceleration,Mild,2025-08-26,2025-09-12,,synthetic
+X00536,A165,PAT,Patellar tendinopathy,Knee,knee,Left,tendon,gradual onset,Mild,2026-03-19,2026-04-01,,synthetic
+X00569,A165,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Left,muscle,high-speed running,Mild,2026-04-25,2026-05-09,,synthetic
+X00129,A166,QUA,Quadriceps muscle injury (grade 1),Anterior thigh,thigh_front,Right,muscle,kicking,Minimal,2024-12-13,2024-12-20,,synthetic
+X00436,A166,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Slight,2025-11-18,2025-11-19,,synthetic
+X00457,A166,SYN,Ankle syndesmosis sprain,Ankle,ankle,Right,ligament,external rotation,Severe,2025-12-10,2026-05-06,,synthetic
+X00597,A166,ACO,Ankle/foot contusion,Foot / ankle,foot,Right,contusion,stamp,Moderate,2026-05-23,2026-07-13,,synthetic
+X00645,A166,QUA,Quadriceps muscle injury (grade 2),Anterior thigh,thigh_front,Right,muscle,acceleration,Mild,2026-07-30,2026-08-19,,synthetic
+X00675,A166,CON,Concussion,Head,head,,brain,head collision,Moderate,2026-08-29,2026-10-13,,synthetic
+X00005,A167,ANK,Ankle sprain (lateral ligament),Ankle,ankle,Right,ligament,change of direction,Minimal,2024-07-12,2024-07-19,,synthetic
+X00068,A167,CAL,Calf muscle injury (grade 1),Calf,calf,Left,muscle,sprinting,Minimal,2024-10-11,2024-10-16,,synthetic
+X00098,A167,QUA,Quadriceps muscle injury (grade 2),Anterior thigh,thigh_front,Left,muscle,sprinting,Mild,2024-11-06,2024-11-23,,synthetic
+X00122,A167,ACH,Achilles tendinopathy,Achilles,achilles,Left,tendon,gradual onset,Mild,2024-12-04,2024-12-13,,synthetic
+X00161,A167,CON,Concussion,Head,head,,brain,head collision,Slight,2025-01-25,2025-01-26,,synthetic
+X00322,A167,ACO,Ankle/foot contusion,Foot / ankle,foot,Left,contusion,tackle,Moderate,2025-07-26,2025-09-26,,synthetic
+X00394,A167,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Left,muscle,sprinting,Slight,2025-10-10,2025-10-11,,synthetic
+X00400,A167,ADD,Adductor muscle injury (grade 2),Groin / adductors,groin,Left,muscle,change of direction,Moderate,2025-10-12,2025-11-10,,synthetic
+X00444,A167,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Right,muscle,overstretching,Mild,2025-11-26,2025-12-05,,synthetic
+X00608,A167,PAT,Patellar tendinopathy,Knee,knee,Left,tendon,gradual onset,Slight,2026-07-06,2026-07-09,,synthetic
+X00705,A167,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Minimal,2026-09-27,2026-10-03,,synthetic
+X00021,A168,ACH,Achilles tendinopathy,Achilles,achilles,Left,tendon,gradual onset,Slight,2024-08-21,2024-08-24,,synthetic
+X00198,A168,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Right,muscle,high-speed running,Mild,2025-03-12,2025-04-08,,synthetic
+X00234,A168,ANK,Ankle sprain (lateral ligament),Ankle,ankle,Right,ligament,change of direction,Mild,2025-04-10,2025-05-06,,synthetic
+X00261,A168,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Right,muscle,high-speed running,Mild,2025-05-07,2025-05-15,Early recurrence,synthetic
+X00273,A168,RIB,Rib/chest contusion,Chest,chest,Left,contusion,collision,Minimal,2025-05-17,2025-05-22,,synthetic
+X00286,A168,PAT,Patellar tendinopathy,Knee,knee,Right,tendon,gradual onset,Minimal,2025-07-03,2025-07-08,,synthetic
+X00298,A168,CAL,Calf muscle injury (grade 1),Calf,calf,Left,muscle,sprinting,Minimal,2025-07-11,2025-07-15,,synthetic
+X00310,A168,ANK,Ankle sprain (lateral ligament),Ankle,ankle,Right,ligament,contact,Mild,2025-07-19,2025-07-27,Late recurrence,synthetic
+X00412,A168,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2025-10-30,2025-11-01,,synthetic
+X00614,A168,ADD,Adductor muscle injury (grade 2),Groin / adductors,groin,Right,muscle,overstretching,Mild,2026-07-10,2026-07-21,,synthetic
+X00665,A168,CAL,Calf muscle injury (grade 2),Calf,calf,Right,muscle,acceleration,Mild,2026-08-20,2026-09-09,,synthetic
+X00711,A168,HAM,Hamstring muscle injury (grade 3),Posterior thigh,thigh_back,Right,muscle,sprinting,Moderate,2026-10-03,2026-11-10,,synthetic
+X00353,A169,TCO,Thigh contusion,Anterior thigh,thigh_front,Right,contusion,tackle,Moderate,2025-08-30,2025-10-07,,synthetic
+X00414,A169,ACO,Ankle/foot contusion,Foot / ankle,foot,Right,contusion,stamp,Moderate,2025-11-01,2025-12-27,,synthetic
+X00478,A169,QUA,Quadriceps muscle injury (grade 2),Anterior thigh,thigh_front,Left,muscle,sprinting,Moderate,2026-01-10,2026-02-10,,synthetic
+X00518,A169,SYN,Ankle syndesmosis sprain,Ankle,ankle,Right,ligament,external rotation,Mild,2026-02-28,2026-03-11,,synthetic
+X00557,A169,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2026-04-11,2026-04-15,,synthetic
+X00581,A169,QUA,Quadriceps muscle injury (grade 2),Anterior thigh,thigh_front,Right,muscle,kicking,Mild,2026-05-02,2026-05-16,,synthetic
+X00036,A170,TCO,Thigh contusion,Anterior thigh,thigh_front,Left,contusion,collision,Slight,2024-09-14,2024-09-15,,synthetic
+X00089,A170,PAT,Patellar tendinopathy,Knee,knee,Left,tendon,gradual onset,Mild,2024-10-26,2024-11-14,,synthetic
+X00313,A170,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2025-07-21,2025-07-25,,synthetic
+X00565,A170,VIR,Viral illness / fever,Systemic,systemic,,systemic,illness,Minimal,2026-04-21,2026-04-27,,synthetic
+X00620,A170,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Left,muscle,high-speed running,Mild,2026-07-13,2026-07-23,,synthetic
+X00027,A171,ACH,Achilles tendinopathy,Achilles,achilles,Left,tendon,gradual onset,Minimal,2024-08-31,2024-09-04,,synthetic
+X00084,A171,PAT,Patellar tendinopathy,Knee,knee,Right,tendon,gradual onset,Slight,2024-10-22,2024-10-25,,synthetic
+X00108,A171,ADD,Adductor muscle injury (grade 1),Groin / adductors,groin,Left,muscle,overstretching,Slight,2024-11-17,2024-11-20,,synthetic
+X00135,A171,GRO,Adductor-related groin pain,Groin / adductors,groin,Left,tendon,gradual onset,Slight,2024-12-18,2024-12-21,,synthetic
+X00439,A171,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2025-11-19,2025-11-24,,synthetic
+X00447,A171,ADD,Adductor muscle injury (grade 3),Groin / adductors,groin,Left,muscle,change of direction,Moderate,2025-12-02,2026-01-26,,synthetic
+X00498,A171,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Right,muscle,high-speed running,Mild,2026-02-07,2026-02-22,,synthetic
+X00514,A171,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2026-02-23,2026-02-27,,synthetic
+X00522,A171,ADD,Adductor muscle injury (grade 1),Groin / adductors,groin,Left,muscle,change of direction,Mild,2026-03-01,2026-03-10,Early recurrence,synthetic
+X00537,A171,CAL,Calf muscle injury (grade 1),Calf,calf,Right,muscle,sprinting,Minimal,2026-03-19,2026-03-26,,synthetic
+X00640,A171,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Left,muscle,sprinting,Minimal,2026-07-25,2026-08-01,,synthetic
+X00658,A171,PAT,Patellar tendinopathy,Knee,knee,Left,tendon,gradual onset,Mild,2026-08-08,2026-08-18,,synthetic
+X00233,A172,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2025-04-07,2025-04-10,,synthetic
+X00354,A172,ANK,Ankle sprain (lateral ligament),Ankle,ankle,Left,ligament,contact,Mild,2025-08-30,2025-09-15,,synthetic
+X00378,A172,MEN,Knee meniscal injury,Knee,knee,Left,bone/joint,twisting,Moderate,2025-09-23,2025-11-06,,synthetic
+X00440,A172,CON,Concussion,Head,head,,brain,head collision,Mild,2025-11-19,2025-12-14,,synthetic
+X00488,A172,ANK,Ankle sprain (lateral ligament),Ankle,ankle,Right,ligament,contact,Mild,2026-01-28,2026-02-18,,synthetic
+X00526,A172,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Left,muscle,high-speed running,Minimal,2026-03-07,2026-03-13,,synthetic
+X00532,A172,ANK,Ankle sprain (lateral ligament),Ankle,ankle,Left,ligament,contact,Moderate,2026-03-14,2026-04-19,Late recurrence,synthetic
+X00582,A172,PAT,Patellar tendinopathy,Knee,knee,Left,tendon,gradual onset,Minimal,2026-05-02,2026-05-09,,synthetic
+X00592,A172,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Right,muscle,sprinting,Mild,2026-05-19,2026-06-01,,synthetic
+X00612,A172,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Left,muscle,sprinting,Moderate,2026-07-09,2026-08-08,Late recurrence,synthetic
+X00666,A172,ADD,Adductor muscle injury (grade 2),Groin / adductors,groin,Left,muscle,kicking,Mild,2026-08-20,2026-09-01,,synthetic
+X00698,A172,GRO,Adductor-related groin pain,Groin / adductors,groin,Left,tendon,gradual onset,Mild,2026-09-19,2026-09-27,,synthetic
+X00037,A173,ACO,Ankle/foot contusion,Foot / ankle,foot,Right,contusion,stamp,Minimal,2024-09-14,2024-09-18,,synthetic
+X00093,A173,ADD,Adductor muscle injury (grade 1),Groin / adductors,groin,Right,muscle,change of direction,Minimal,2024-11-01,2024-11-06,,synthetic
+X00186,A173,VIR,Viral illness / fever,Systemic,systemic,,systemic,illness,Slight,2025-02-17,2025-02-19,,synthetic
+X00201,A173,ACH,Achilles tendinopathy,Achilles,achilles,Left,tendon,gradual onset,Mild,2025-03-14,2025-03-27,,synthetic
+X00343,A173,TCO,Thigh contusion,Anterior thigh,thigh_front,Right,contusion,collision,Slight,2025-08-16,2025-08-18,,synthetic
+X00373,A173,ANK,Ankle sprain (lateral ligament),Ankle,ankle,Right,ligament,contact,Moderate,2025-09-18,2025-10-23,,synthetic
+X00424,A173,ADD,Adductor muscle injury (grade 1),Groin / adductors,groin,Right,muscle,kicking,Mild,2025-11-08,2025-11-16,,synthetic
+X00450,A173,TCO,Thigh contusion,Anterior thigh,thigh_front,Right,contusion,tackle,Slight,2025-12-03,2025-12-04,Late recurrence,synthetic
+X00466,A173,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Right,muscle,overstretching,Minimal,2025-12-20,2025-12-26,,synthetic
+X00527,A173,ACH,Achilles tendinopathy,Achilles,achilles,Right,tendon,gradual onset,Minimal,2026-03-07,2026-03-14,,synthetic
+X00561,A173,QUA,Quadriceps muscle injury (grade 2),Anterior thigh,thigh_front,Right,muscle,acceleration,Moderate,2026-04-15,2026-05-14,,synthetic
+X00648,A173,MCL,Knee MCL sprain,Knee,knee,Right,ligament,contact,Mild,2026-08-01,2026-08-24,,synthetic
+X00676,A173,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Right,muscle,overstretching,Moderate,2026-08-29,2026-09-27,Late recurrence,synthetic
+X00149,A174,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Slight,2025-01-14,2025-01-16,,synthetic
+X00708,A174,MCL,Knee MCL sprain,Knee,knee,Left,ligament,valgus loading,Moderate,2026-10-01,2026-11-26,,synthetic
+X00566,A175,PAT,Patellar tendinopathy,Knee,knee,Left,tendon,gradual onset,Mild,2026-04-21,2026-05-17,,synthetic
+X00641,A175,QUA,Quadriceps muscle injury (grade 2),Anterior thigh,thigh_front,Right,muscle,kicking,Mild,2026-07-25,2026-08-14,,synthetic
+X00075,A176,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Minimal,2024-10-16,2024-10-20,,synthetic
+X00087,A176,ADD,Adductor muscle injury (grade 2),Groin / adductors,groin,Right,muscle,kicking,Mild,2024-10-23,2024-11-17,,synthetic
+X00118,A176,GRO,Adductor-related groin pain,Groin / adductors,groin,Right,tendon,gradual onset,Minimal,2024-11-30,2024-12-04,,synthetic
+X00199,A176,CON,Concussion,Head,head,,brain,head collision,Moderate,2025-03-12,2025-04-11,,synthetic
+X00292,A176,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Right,muscle,sprinting,Slight,2025-07-09,2025-07-12,,synthetic
+X00408,A176,CAL,Calf muscle injury (grade 1),Calf,calf,Right,muscle,jumping,Minimal,2025-10-25,2025-10-31,,synthetic
+X00445,A176,ACH,Achilles tendinopathy,Achilles,achilles,Left,tendon,gradual onset,Minimal,2025-11-29,2025-12-03,,synthetic
+X00637,A176,ACH,Achilles tendinopathy,Achilles,achilles,Right,tendon,gradual onset,Slight,2026-07-23,2026-07-26,,synthetic
+X00651,A176,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Right,muscle,high-speed running,Minimal,2026-08-05,2026-08-12,,synthetic
+X00178,A177,ADD,Adductor muscle injury (grade 1),Groin / adductors,groin,Right,muscle,kicking,Minimal,2025-02-13,2025-02-20,,synthetic
+X00469,A177,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2025-12-30,2026-01-03,,synthetic
+X00048,A178,CON,Concussion,Head,head,,brain,head collision,Slight,2024-09-25,2024-09-26,,synthetic
+X00119,A178,ACH,Achilles tendinopathy,Achilles,achilles,Right,tendon,gradual onset,Mild,2024-11-30,2024-12-08,,synthetic
+X00323,A178,ACH,Achilles tendinopathy,Achilles,achilles,Right,tendon,gradual onset,Slight,2025-07-26,2025-07-28,Late recurrence,synthetic
+X00376,A178,CAL,Calf muscle injury (grade 1),Calf,calf,Right,muscle,acceleration,Minimal,2025-09-20,2025-09-27,,synthetic
+X00589,A178,PAT,Patellar tendinopathy,Knee,knee,Right,tendon,gradual onset,Minimal,2026-05-16,2026-05-21,,synthetic
+X00604,A178,VIR,Viral illness / fever,Systemic,systemic,,systemic,illness,Minimal,2026-07-03,2026-07-07,,synthetic
+X00635,A178,MCL,Knee MCL sprain,Knee,knee,Right,ligament,valgus loading,Moderate,2026-07-22,2026-09-14,,synthetic
+X00063,A179,HAM,Hamstring muscle injury (grade 3),Posterior thigh,thigh_back,Right,muscle,high-speed running,Moderate,2024-10-05,2024-11-14,,synthetic
+X00125,A179,HAM,Hamstring muscle injury (grade 3),Posterior thigh,thigh_back,Right,muscle,overstretching,Moderate,2024-12-10,2025-01-29,Early recurrence,synthetic
+X00171,A179,TCO,Thigh contusion,Anterior thigh,thigh_front,Right,contusion,collision,Minimal,2025-02-08,2025-02-14,,synthetic
+X00184,A179,RIB,Rib/chest contusion,Chest,chest,Left,contusion,collision,Mild,2025-02-15,2025-03-08,,synthetic
+X00218,A179,MCL,Knee MCL sprain,Knee,knee,Left,ligament,change of direction,Mild,2025-03-22,2025-04-03,,synthetic
+X00244,A179,ACO,Ankle/foot contusion,Foot / ankle,foot,Right,contusion,stamp,Minimal,2025-04-19,2025-04-23,,synthetic
+X00311,A179,CON,Concussion,Head,head,,brain,fall,Minimal,2025-07-19,2025-07-24,,synthetic
+X00326,A179,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2025-07-28,2025-07-29,,synthetic
+X00327,A179,QUA,Quadriceps muscle injury (grade 1),Anterior thigh,thigh_front,Right,muscle,sprinting,Minimal,2025-07-29,2025-08-04,,synthetic
+X00333,A179,ADD,Adductor muscle injury (grade 1),Groin / adductors,groin,Right,muscle,overstretching,Mild,2025-08-06,2025-08-15,,synthetic
+X00370,A179,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Right,muscle,overstretching,Mild,2025-09-13,2025-09-28,Late recurrence,synthetic
+X00551,A179,ACO,Ankle/foot contusion,Foot / ankle,foot,Right,contusion,tackle,Mild,2026-04-04,2026-04-12,Late recurrence,synthetic
+X00688,A179,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2026-09-07,2026-09-09,,synthetic
+X00505,A180,VIR,Viral illness / fever,Systemic,systemic,,systemic,illness,Minimal,2026-02-14,2026-02-20,,synthetic
+X00540,A180,MCL,Knee MCL sprain,Knee,knee,Left,ligament,valgus loading,Severe,2026-03-21,2026-08-18,,synthetic
+X00677,A180,ACH,Achilles tendinopathy,Achilles,achilles,Right,tendon,gradual onset,Slight,2026-08-29,2026-08-31,,synthetic
+X00691,A180,SYN,Ankle syndesmosis sprain,Ankle,ankle,Right,ligament,contact,Mild,2026-09-09,2026-09-24,,synthetic
+X00712,A180,CAL,Calf muscle injury (grade 2),Calf,calf,Right,muscle,acceleration,Moderate,2026-10-03,2026-11-05,,synthetic
+X00202,A181,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Minimal,2025-03-14,2025-03-20,,synthetic
+X00267,A181,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2025-05-14,2025-05-17,,synthetic
+X00470,A181,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2026-01-01,2026-01-03,,synthetic
+X00493,A181,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Left,muscle,sprinting,Slight,2026-01-31,2026-02-03,,synthetic
+X00682,A181,CAL,Calf muscle injury (grade 2),Calf,calf,Left,muscle,sprinting,Mild,2026-09-02,2026-09-25,,synthetic
+X00056,A182,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Right,muscle,high-speed running,Minimal,2024-09-29,2024-10-03,,synthetic
+X00064,A182,ADD,Adductor muscle injury (grade 1),Groin / adductors,groin,Right,muscle,change of direction,Slight,2024-10-05,2024-10-07,,synthetic
+X00381,A182,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Slight,2025-09-25,2025-09-27,,synthetic
+X00474,A182,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Left,muscle,sprinting,Slight,2026-01-06,2026-01-09,,synthetic
+X00479,A182,CON,Concussion,Head,head,,brain,head collision,Slight,2026-01-10,2026-01-12,,synthetic
+X00663,A182,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Slight,2026-08-17,2026-08-20,,synthetic
+X00702,A182,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Minimal,2026-09-21,2026-09-26,,synthetic
+X00167,A183,GRO,Adductor-related groin pain,Groin / adductors,groin,Left,tendon,gradual onset,Mild,2025-02-01,2025-02-13,,synthetic
+X00226,A183,QUA,Quadriceps muscle injury (grade 2),Anterior thigh,thigh_front,Right,muscle,kicking,Mild,2025-03-30,2025-04-22,,synthetic
+X00268,A183,CAL,Calf muscle injury (grade 2),Calf,calf,Right,muscle,acceleration,Mild,2025-05-14,2025-06-03,,synthetic
+X00317,A183,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Left,muscle,sprinting,Slight,2025-07-24,2025-07-26,,synthetic
+X00339,A183,RIB,Rib/chest contusion,Chest,chest,Left,contusion,collision,Mild,2025-08-09,2025-09-05,,synthetic
+X00508,A183,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Minimal,2026-02-18,2026-02-23,,synthetic
+X00692,A183,CAL,Calf muscle injury (grade 2),Calf,calf,Left,muscle,sprinting,Moderate,2026-09-09,2026-10-10,,synthetic
+X00090,A184,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Left,muscle,sprinting,Mild,2024-10-29,2024-11-06,,synthetic
+X00232,A184,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2025-04-06,2025-04-10,,synthetic
+X00489,A184,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2026-01-30,2026-01-31,,synthetic
+X00598,A184,VIR,Viral illness / fever,Systemic,systemic,,systemic,illness,Slight,2026-05-24,2026-05-25,,synthetic
+X00678,A184,ANK,Ankle sprain (lateral ligament),Ankle,ankle,Left,ligament,change of direction,Mild,2026-08-29,2026-09-16,,synthetic
+X00120,A185,QUA,Quadriceps muscle injury (grade 2),Anterior thigh,thigh_front,Right,muscle,sprinting,Mild,2024-11-30,2024-12-27,,synthetic
+X00169,A185,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Slight,2025-02-02,2025-02-03,,synthetic
+X00385,A185,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2025-09-30,2025-10-02,,synthetic
+X00519,A185,SYN,Ankle syndesmosis sprain,Ankle,ankle,Left,ligament,external rotation,Moderate,2026-02-28,2026-04-19,,synthetic
+X00001,A186,VIR,Viral illness / fever,Systemic,systemic,,systemic,illness,Minimal,2024-07-01,2024-07-06,,synthetic
+X00003,A186,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2024-07-09,2024-07-14,,synthetic
+X00092,A186,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Left,muscle,high-speed running,Mild,2024-10-30,2024-11-07,,synthetic
+X00103,A186,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Left,muscle,sprinting,Minimal,2024-11-14,2024-11-18,Early recurrence,synthetic
+X00134,A186,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2024-12-15,2024-12-16,,synthetic
+X00219,A186,ACO,Ankle/foot contusion,Foot / ankle,foot,Left,contusion,tackle,Minimal,2025-03-22,2025-03-28,,synthetic
+X00253,A186,CAL,Calf muscle injury (grade 2),Calf,calf,Right,muscle,jumping,Moderate,2025-04-28,2025-06-02,,synthetic
+X00324,A186,TCO,Thigh contusion,Anterior thigh,thigh_front,Left,contusion,tackle,Minimal,2025-07-26,2025-07-30,,synthetic
+X00335,A186,PAT,Patellar tendinopathy,Knee,knee,Left,tendon,gradual onset,Mild,2025-08-07,2025-08-31,,synthetic
+X00387,A186,QUA,Quadriceps muscle injury (grade 2),Anterior thigh,thigh_front,Left,muscle,sprinting,Mild,2025-10-03,2025-10-19,,synthetic
+X00415,A186,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Left,muscle,sprinting,Slight,2025-11-01,2025-11-02,Late recurrence,synthetic
+X00446,A186,QUA,Quadriceps muscle injury (grade 1),Anterior thigh,thigh_front,Right,muscle,acceleration,Minimal,2025-11-29,2025-12-03,,synthetic
+X00523,A186,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2026-03-04,2026-03-07,,synthetic
+X00531,A186,QUA,Quadriceps muscle injury (grade 1),Anterior thigh,thigh_front,Left,muscle,sprinting,Mild,2026-03-12,2026-03-20,Late recurrence,synthetic
+X00570,A186,ACO,Ankle/foot contusion,Foot / ankle,foot,Left,contusion,tackle,Mild,2026-04-25,2026-05-06,,synthetic
+X00590,A186,ACO,Ankle/foot contusion,Foot / ankle,foot,Left,contusion,tackle,Minimal,2026-05-16,2026-05-23,Early recurrence,synthetic
+X00625,A186,QUA,Quadriceps muscle injury (grade 1),Anterior thigh,thigh_front,Left,muscle,acceleration,Slight,2026-07-16,2026-07-18,Late recurrence,synthetic
+X00019,A187,ACH,Achilles tendinopathy,Achilles,achilles,Left,tendon,gradual onset,Mild,2024-08-17,2024-08-30,,synthetic
+X00030,A187,ADD,Adductor muscle injury (grade 2),Groin / adductors,groin,Left,muscle,kicking,Mild,2024-09-07,2024-09-24,,synthetic
+X00060,A187,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Left,muscle,sprinting,Mild,2024-10-02,2024-10-18,,synthetic
+X00115,A187,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2024-11-26,2024-12-01,,synthetic
+X00168,A187,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2025-02-01,2025-02-02,,synthetic
+X00179,A187,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Left,muscle,overstretching,Minimal,2025-02-13,2025-02-19,Late recurrence,synthetic
+X00254,A187,TCO,Thigh contusion,Anterior thigh,thigh_front,Left,contusion,tackle,Minimal,2025-04-30,2025-05-04,,synthetic
+X00430,A187,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2025-11-14,2025-11-16,,synthetic
+X00020,A188,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Minimal,2024-08-20,2024-08-24,,synthetic
+X00072,A188,MEN,Knee meniscal injury,Knee,knee,Right,bone/joint,change of direction,Moderate,2024-10-12,2024-12-18,,synthetic
+X00142,A188,ACH,Achilles tendinopathy,Achilles,achilles,Left,tendon,gradual onset,Minimal,2025-01-04,2025-01-11,,synthetic
+X00152,A188,ADD,Adductor muscle injury (grade 2),Groin / adductors,groin,Left,muscle,overstretching,Mild,2025-01-16,2025-01-30,,synthetic
+X00172,A188,ADD,Adductor muscle injury (grade 1),Groin / adductors,groin,Right,muscle,kicking,Minimal,2025-02-08,2025-02-14,,synthetic
+X00185,A188,ACH,Achilles tendinopathy,Achilles,achilles,Right,tendon,gradual onset,Minimal,2025-02-15,2025-02-22,,synthetic
+X00197,A188,TCO,Thigh contusion,Anterior thigh,thigh_front,Right,contusion,tackle,Slight,2025-03-08,2025-03-11,,synthetic
+X00208,A188,TCO,Thigh contusion,Anterior thigh,thigh_front,Right,contusion,collision,Mild,2025-03-19,2025-03-31,Early recurrence,synthetic
+X00255,A188,PAT,Patellar tendinopathy,Knee,knee,Right,tendon,gradual onset,Mild,2025-04-30,2025-05-22,,synthetic
+X00295,A188,CAL,Calf muscle injury (grade 3),Calf,calf,Right,muscle,jumping,Moderate,2025-07-10,2025-08-21,,synthetic
+X00360,A188,TCO,Thigh contusion,Anterior thigh,thigh_front,Left,contusion,tackle,Minimal,2025-09-06,2025-09-12,,synthetic
+X00371,A188,TCO,Thigh contusion,Anterior thigh,thigh_front,Right,contusion,tackle,Severe,2025-09-13,2025-12-20,Late recurrence,synthetic
+X00476,A188,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Right,muscle,high-speed running,Minimal,2026-01-08,2026-01-15,,synthetic
+X00485,A188,MCL,Knee MCL sprain,Knee,knee,Right,ligament,valgus loading,Mild,2026-01-17,2026-01-28,,synthetic
+X00494,A188,RIB,Rib/chest contusion,Chest,chest,Left,contusion,collision,Minimal,2026-01-31,2026-02-04,,synthetic
+X00499,A188,TCO,Thigh contusion,Anterior thigh,thigh_front,Right,contusion,collision,Moderate,2026-02-07,2026-05-06,Early recurrence,synthetic
+X00632,A188,ACO,Ankle/foot contusion,Foot / ankle,foot,Right,contusion,tackle,Slight,2026-07-18,2026-07-20,,synthetic
+X00634,A188,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2026-07-21,2026-07-27,,synthetic
+X00649,A188,ADD,Adductor muscle injury (grade 2),Groin / adductors,groin,Right,muscle,kicking,Mild,2026-08-01,2026-08-29,,synthetic
+X00699,A188,CON,Concussion,Head,head,,brain,fall,Mild,2026-09-19,2026-10-02,,synthetic
+X00104,A189,GRO,Adductor-related groin pain,Groin / adductors,groin,Right,tendon,gradual onset,Mild,2024-11-15,2024-11-30,,synthetic
+X00127,A189,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Left,muscle,high-speed running,Mild,2024-12-11,2024-12-21,,synthetic
+X00325,A189,ADD,Adductor muscle injury (grade 1),Groin / adductors,groin,Right,muscle,change of direction,Minimal,2025-07-26,2025-07-30,,synthetic
+X00448,A189,VIR,Viral illness / fever,Systemic,systemic,,systemic,illness,Minimal,2025-12-02,2025-12-07,,synthetic
+X00567,A189,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Minimal,2026-04-23,2026-04-29,,synthetic
+X00664,A189,VIR,Viral illness / fever,Systemic,systemic,,systemic,illness,Minimal,2026-08-17,2026-08-23,,synthetic
+X00016,A190,PAT,Patellar tendinopathy,Knee,knee,Right,tendon,gradual onset,Slight,2024-08-15,2024-08-18,,synthetic
+X00049,A190,TCO,Thigh contusion,Anterior thigh,thigh_front,Right,contusion,tackle,Slight,2024-09-25,2024-09-27,,synthetic
+X00052,A190,ADD,Adductor muscle injury (grade 2),Groin / adductors,groin,Left,muscle,kicking,Mild,2024-09-27,2024-10-08,,synthetic
+X00094,A190,SYN,Ankle syndesmosis sprain,Ankle,ankle,Right,ligament,contact,Severe,2024-11-02,2025-03-29,,synthetic
+X00235,A190,CAL,Calf muscle injury (grade 1),Calf,calf,Left,muscle,jumping,Mild,2025-04-10,2025-04-20,,synthetic
+X00256,A190,ADD,Adductor muscle injury (grade 2),Groin / adductors,groin,Left,muscle,overstretching,Mild,2025-04-30,2025-05-18,Late recurrence,synthetic
+X00296,A190,SYN,Ankle syndesmosis sprain,Ankle,ankle,Right,ligament,contact,Moderate,2025-07-10,2025-09-11,Late recurrence,synthetic
+X00379,A190,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Right,muscle,overstretching,Mild,2025-09-23,2025-10-18,,synthetic
+X00409,A190,PAT,Patellar tendinopathy,Knee,knee,Right,tendon,gradual onset,Mild,2025-10-25,2025-11-04,,synthetic
+X00425,A190,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Right,muscle,sprinting,Mild,2025-11-08,2025-12-01,Early recurrence,synthetic
+X00461,A190,ANK,Ankle sprain (lateral ligament),Ankle,ankle,Left,ligament,change of direction,Mild,2025-12-16,2026-01-01,,synthetic
+X00477,A190,ANK,Ankle sprain (lateral ligament),Ankle,ankle,Right,ligament,landing,Mild,2026-01-09,2026-01-25,,synthetic
+X00506,A190,SYN,Ankle syndesmosis sprain,Ankle,ankle,Right,ligament,contact,Severe,2026-02-14,2026-07-14,Late recurrence,synthetic
+X00642,A190,ACO,Ankle/foot contusion,Foot / ankle,foot,Right,contusion,tackle,Minimal,2026-07-25,2026-07-31,,synthetic
+X00650,A190,SYN,Ankle syndesmosis sprain,Ankle,ankle,Right,ligament,contact,Mild,2026-08-01,2026-08-09,Early recurrence,synthetic
+X00659,A190,MCL,Knee MCL sprain,Knee,knee,Right,ligament,contact,Mild,2026-08-13,2026-09-07,,synthetic
+X00714,A190,GRO,Adductor-related groin pain,Groin / adductors,groin,Right,tendon,gradual onset,Slight,2026-10-05,2026-10-08,,synthetic
+X00057,A191,VIR,Viral illness / fever,Systemic,systemic,,systemic,illness,Slight,2024-09-29,2024-10-01,,synthetic
+X00162,A191,TCO,Thigh contusion,Anterior thigh,thigh_front,Right,contusion,tackle,Mild,2025-01-25,2025-02-04,,synthetic
+X00289,A191,SYN,Ankle syndesmosis sprain,Ankle,ankle,Right,ligament,external rotation,Mild,2025-07-07,2025-07-21,,synthetic
+X00345,A191,CAL,Calf muscle injury (grade 1),Calf,calf,Left,muscle,jumping,Mild,2025-08-21,2025-08-29,,synthetic
+X00459,A191,CON,Concussion,Head,head,,brain,fall,Mild,2025-12-13,2026-01-06,,synthetic
+X00694,A191,PAT,Patellar tendinopathy,Knee,knee,Left,tendon,gradual onset,Mild,2026-09-12,2026-09-22,,synthetic
+X00069,A192,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Right,muscle,overstretching,Minimal,2024-10-11,2024-10-16,,synthetic
+X00095,A192,GRO,Adductor-related groin pain,Groin / adductors,groin,Right,tendon,gradual onset,Minimal,2024-11-02,2024-11-07,,synthetic
+X00203,A192,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Right,muscle,sprinting,Minimal,2025-03-14,2025-03-21,Late recurrence,synthetic
+X00230,A192,TCO,Thigh contusion,Anterior thigh,thigh_front,Right,contusion,tackle,Minimal,2025-04-05,2025-04-09,,synthetic
+X00361,A192,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2025-09-06,2025-09-10,,synthetic
+X00599,A192,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2026-05-27,2026-05-29,,synthetic
+X00002,A193,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2024-07-08,2024-07-11,,synthetic
+X00391,A193,ACO,Ankle/foot contusion,Foot / ankle,foot,Left,contusion,stamp,Minimal,2025-10-04,2025-10-10,,synthetic
+X00667,A193,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Minimal,2026-08-20,2026-08-24,,synthetic
+X00007,A194,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2024-07-19,2024-07-22,,synthetic
+X00192,A194,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2025-03-03,2025-03-08,,synthetic
+X00362,A194,ACO,Ankle/foot contusion,Foot / ankle,foot,Left,contusion,tackle,Mild,2025-09-06,2025-09-14,,synthetic
+X00154,A195,TCO,Thigh contusion,Anterior thigh,thigh_front,Right,contusion,collision,Slight,2025-01-18,2025-01-19,,synthetic
+X00209,A195,TCO,Thigh contusion,Anterior thigh,thigh_front,Right,contusion,tackle,Slight,2025-03-19,2025-03-22,Early recurrence,synthetic
+X00257,A195,SYN,Ankle syndesmosis sprain,Ankle,ankle,Right,ligament,external rotation,Moderate,2025-04-30,2025-06-17,,synthetic
+X00418,A195,VIR,Viral illness / fever,Systemic,systemic,,systemic,illness,Minimal,2025-11-05,2025-11-11,,synthetic
+X00006,A196,ADD,Adductor muscle injury (grade 1),Groin / adductors,groin,Right,muscle,kicking,Minimal,2024-07-12,2024-07-16,,synthetic
+X00275,A196,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Minimal,2025-05-20,2025-05-24,,synthetic
+X00315,A196,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Slight,2025-07-22,2025-07-24,,synthetic
+X00426,A196,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Slight,2025-11-11,2025-11-14,,synthetic
+X00533,A196,CAL,Calf muscle injury (grade 1),Calf,calf,Right,muscle,acceleration,Slight,2026-03-14,2026-03-15,,synthetic
+X00700,A196,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Minimal,2026-09-20,2026-09-26,,synthetic
+X00102,A197,HAM,Hamstring muscle injury (grade 3),Posterior thigh,thigh_back,Right,muscle,overstretching,Moderate,2024-11-13,2024-12-21,,synthetic
+X00194,A197,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2025-03-07,2025-03-09,,synthetic
+X00451,A197,QUA,Quadriceps muscle injury (grade 2),Anterior thigh,thigh_front,Right,muscle,sprinting,Mild,2025-12-03,2025-12-15,,synthetic
+X00696,A197,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Slight,2026-09-15,2026-09-18,,synthetic
+X00713,A197,ADD,Adductor muscle injury (grade 2),Groin / adductors,groin,Right,muscle,change of direction,Mild,2026-10-04,2026-10-16,,synthetic
+X00050,A198,CAL,Calf muscle injury (grade 1),Calf,calf,Right,muscle,acceleration,Mild,2024-09-25,2024-10-05,,synthetic
+X00067,A198,ADD,Adductor muscle injury (grade 2),Groin / adductors,groin,Right,muscle,change of direction,Mild,2024-10-09,2024-10-27,,synthetic
+X00096,A198,TCO,Thigh contusion,Anterior thigh,thigh_front,Right,contusion,tackle,Mild,2024-11-02,2024-11-12,,synthetic
+X00133,A198,CAL,Calf muscle injury (grade 1),Calf,calf,Right,muscle,acceleration,Minimal,2024-12-14,2024-12-21,Late recurrence,synthetic
+X00416,A198,HAM,Hamstring muscle injury (grade 1),Posterior thigh,thigh_back,Right,muscle,high-speed running,Minimal,2025-11-01,2025-11-05,,synthetic
+X00454,A198,ACO,Ankle/foot contusion,Foot / ankle,foot,Right,contusion,tackle,Slight,2025-12-06,2025-12-09,,synthetic
+X00500,A198,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Minimal,2026-02-07,2026-02-11,,synthetic
+X00139,A199,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2024-12-27,2025-01-01,,synthetic
+X00355,A199,ACO,Ankle/foot contusion,Foot / ankle,foot,Right,contusion,stamp,Minimal,2025-09-03,2025-09-09,,synthetic
+X00621,A199,QUA,Quadriceps muscle injury (grade 1),Anterior thigh,thigh_front,Right,muscle,kicking,Slight,2026-07-13,2026-07-16,,synthetic
+X00633,A199,CAL,Calf muscle injury (grade 2),Calf,calf,Right,muscle,sprinting,Mild,2026-07-18,2026-08-14,,synthetic
+X00159,A200,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Slight,2025-01-23,2025-01-26,,synthetic
+X00270,A200,ADD,Adductor muscle injury (grade 2),Groin / adductors,groin,Right,muscle,change of direction,Mild,2025-05-15,2025-06-02,,synthetic
+X00330,A200,GAS,Gastroenteritis,Systemic,systemic,,systemic,illness,Minimal,2025-08-02,2025-08-08,,synthetic
+X00368,A200,ANK,Ankle sprain (lateral ligament),Ankle,ankle,Right,ligament,landing,Slight,2025-09-12,2025-09-13,,synthetic
+X00512,A200,HAM,Hamstring muscle injury (grade 2),Posterior thigh,thigh_back,Right,muscle,sprinting,Mild,2026-02-21,2026-03-12,,synthetic
+X00558,A200,ACH,Achilles tendinopathy,Achilles,achilles,Right,tendon,gradual onset,Slight,2026-04-14,2026-04-16,,synthetic
+X00571,A200,TCO,Thigh contusion,Anterior thigh,thigh_front,Right,contusion,collision,Slight,2026-04-25,2026-04-27,,synthetic
+X00602,A200,ADD,Adductor muscle injury (grade 1),Groin / adductors,groin,Left,muscle,change of direction,Mild,2026-07-01,2026-07-09,,synthetic
+X00689,A200,URT,Upper respiratory tract infection,Systemic,systemic,,systemic,illness,Minimal,2026-09-07,2026-09-13,,synthetic

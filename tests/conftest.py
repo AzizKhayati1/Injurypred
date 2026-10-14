@@ -36,7 +36,10 @@ def small_cfg(tmp_path_factory):
 
 @pytest.fixture(scope="session")
 def small_ds(small_cfg) -> Dataset:
+    from src.data.profiles import write_profiles
+
     save(generate(small_cfg), small_cfg["paths"]["synthetic_dir"])
+    write_profiles(small_cfg["paths"]["synthetic_dir"])
     return load_from_csv(small_cfg["paths"]["synthetic_dir"])
 
 

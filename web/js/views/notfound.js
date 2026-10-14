@@ -8,5 +8,5 @@ export async function notFoundView(ctx, err) {
     <h1 style="margin-bottom:8px">Page not found</h1>
     <p>We couldn't find that page${what}.</p>
     <p style="margin-top:18px"><a class="btn btn-primary" href="/squad" data-link>Go to squad overview</a>
-    <a class="btn" href="/athletes" data-link>Browse athletes</a></p></div>`;
+    <a class="btn" href="/players" data-link>Browse athletes</a></p></div>`;
 }

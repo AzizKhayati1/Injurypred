@@ -1,7 +1,7 @@
 import { getAthlete } from "../data.js";
 import { chart, line, series } from "../charts.js";
 import { card, css, esc, fmtDate, num } from "../ui.js";
-import { athleteHeader } from "./athlete.js";
+import { playerCrumbs, playerHero } from "./player.js";
 
 export async function workloadView(ctx) {
   const id = ctx.params.id;
@@ -12,13 +12,12 @@ export async function workloadView(ctx) {
   const start = Math.max(0, w.date.length - days);
   const sl = (k) => w[k].slice(start);
   const labels = sl("date").map((x) => fmtDate(x, { day: "numeric", month: "short" }));
-  ctx.title(`${id} · Workload`);
-  ctx.crumbs([["Athletes", "/athletes"], [esc(id), `/athletes/${id}`], ["Workload"]]);
+  playerCrumbs(ctx, d, "Workload");
   const last = (k) => w[k][w[k].length - 1];
-  ctx.main.innerHTML = `${athleteHeader(id, d, "workload")}
+  ctx.main.innerHTML = `${playerHero(d, "workload")}
     <div class="page-head" style="margin-bottom:14px">
       <p style="margin:0">Daily GPS-derived load and rolling workload features up to ${fmtDate(last("date"))}.</p>
-      <div class="seg">${[28, 56, 90, 180].map((n) => `<a href="/athletes/${id}/workload?days=${n}" data-link class="${n === days ? "active" : ""}">${n} days</a>`).join("")}</div>
+      <div class="seg">${[28, 56, 90, 180].map((n) => `<a href="/players/${id}/workload?days=${n}" data-link class="${n === days ? "active" : ""}">${n} days</a>`).join("")}</div>
     </div>
     <div class="kpis">
       ${[["7-day player load", num(last("player_load_7d")), `chronic weekly ${num(last("player_load_28d") / 4)}`],

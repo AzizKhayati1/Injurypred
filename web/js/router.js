@@ -70,8 +70,7 @@ export async function render(scrollTop = false) {
 export function setNotFound(view) { routes.notFound = view; }
 
 function closeMenu() {
-  document.getElementById("sidebar").classList.remove("open");
-  document.getElementById("scrim").hidden = true;
+  document.getElementById("sitenav").classList.remove("open");
   document.getElementById("menu-btn").setAttribute("aria-expanded", "false");
 }
 

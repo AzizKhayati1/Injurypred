@@ -242,6 +242,36 @@ def validate_consistency(athletes: pd.DataFrame, sessions: pd.DataFrame, absence
     return report
 
 
+def validate_profiles(players, clubs, injury_details, athletes, absences, report: ValidationReport | None = None
+                      ) -> ValidationReport:
+    """Checks for the optional descriptive tables (player bios, clubs, clinical injury details)."""
+    report = report or ValidationReport()
+    known = set(athletes["athlete_id"])
+    if players is not None:
+        report.n_rows["players"] = len(players)
+        report.add("duplicate_athlete_id", "ERROR", "players", players["athlete_id"].duplicated(keep=False),
+                   "duplicate athlete_id")
+        report.add("unknown_athlete_id", "ERROR", "players", ~players["athlete_id"].isin(known),
+                   "athlete_id not present in athletes table")
+        h = pd.to_numeric(players.get("height_cm"), errors="coerce")
+        report.add("implausible_height", "WARNING", "players", (h < 140) | (h > 220), "height outside 140–220 cm")
+        if "shirt_number" in players and "team_id" in athletes:
+            t = players.merge(athletes[["athlete_id", "team_id"]], on="athlete_id")
+            report.add("duplicate_shirt_number", "WARNING", "players",
+                       t.duplicated(["team_id", "shirt_number"], keep=False), "shirt number used twice in a club")
+    if clubs is not None:
+        report.n_rows["clubs"] = len(clubs)
+        report.add("unknown_team_id", "WARNING", "clubs", ~clubs["team_id"].isin(set(athletes["team_id"])),
+                   "club without athletes")
+    if injury_details is not None:
+        report.n_rows["injury_details"] = len(injury_details)
+        report.add("unknown_absence_id", "ERROR", "injury_details",
+                   ~injury_details["absence_id"].isin(set(absences["absence_id"])), "absence_id not in absences table")
+        report.add("duplicate_absence_id", "ERROR", "injury_details",
+                   injury_details["absence_id"].duplicated(keep=False), "duplicate absence_id")
+    return report
+
+
 def validate_dataset(athletes: pd.DataFrame, sessions: pd.DataFrame, absences: pd.DataFrame,
                      today: date | None = None, raise_on_error: bool = True,
                      record_level: bool = True) -> ValidationReport:
@@ -268,6 +298,7 @@ def main() -> None:
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
     ds = load_dataset(load_config())
     report = validate_dataset(ds.athletes, ds.sessions, ds.absences, raise_on_error=False)
+    validate_profiles(ds.players, ds.clubs, ds.injury_details, ds.athletes, ds.absences, report)
     print(report.summary())
     print(json.dumps(report.n_rows))
     sys.exit(0 if report.ok else 1)

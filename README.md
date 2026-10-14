@@ -96,27 +96,34 @@ Routing uses real URLs that can be bookmarked, shared and reloaded:
 
 | URL | view |
 |---|---|
-| `/squad` (`?team=T1`) | squad overview |
-| `/athletes` (`?team=&pos=&status=&q=`) | searchable, sortable athlete list (filters kept in the URL) |
-| `/athletes/A172` | explained risk estimate, risk history, personal baseline, absences |
-| `/athletes/A172/workload` (`?days=90`) | workload monitor |
-| `/simulator`, `/simulator/A172` (`?dim=sprint_load_pct`) | what-if simulator |
+| `/` | home: club strip, league injury headline, players to watch, latest injury news |
+| `/players` (`?club=&pos=&status=&q=&sort=&view=table`) | player cards / table with filters kept in the URL |
+| `/players/A172` | player profile: hero banner, season stats, explained risk, risk history, baseline |
+| `/players/A172/injuries` | clinical injury log, body map, recurrences, severity |
+| `/players/A172/prevention` | evidence-based prevention recommendations with citations |
+| `/players/A172/workload` (`?days=90`) · `/players/A172/simulator` | workload monitor · what-if simulator |
+| `/clubs`, `/clubs/T3` | clubs; roster grouped by position with status and risk |
+| `/injuries` (`?club=T1`) | league injury report: who is out, estimated return, injury statistics |
+| `/squad` (`?team=T1`) | risk center (squad risk overview) |
+| `/simulator` | what-if: choose a player |
 | `/heatmap` (`?team=&days=28`) | athletes × dates risk heatmap |
 | `/model`, `/about` | performance & drift, methodology |
 
 Preview locally with the same routing rules: `make web-serve` → <http://127.0.0.1:8080>.
 
-| Squad overview | Athlete |
+| Home | Player profile |
 |---|---|
-| ![](docs/screenshots/web_squad.png) | ![](docs/screenshots/web_athlete.png) |
-| **What-if simulator** | **Mobile** |
-| ![](docs/screenshots/web_simulator.png) | ![](docs/screenshots/web_mobile.png) |
+| ![](docs/screenshots/web_home.png) | ![](docs/screenshots/web_player.png) |
+| **Injury history & body map** | **Prevention plan** |
+| ![](docs/screenshots/web_injuries_tab.png) | ![](docs/screenshots/web_prevention.png) |
+| **Club roster** | **League injury report** |
+| ![](docs/screenshots/web_club.png) | ![](docs/screenshots/web_report.png) |
 
 ### Local (Python ≥ 3.11)
 
 ```bash
 pip install -r requirements-dev.txt
-make test          # 98 unit + integration tests
+make test          # 121 unit + integration tests
 make train         # validate → features → 5 models → select → evaluate → register (MLflow, local SQLite)
 make api           # http://localhost:8000/docs
 make dashboard     # http://localhost:8501 (uses the API if running, otherwise in-process)
@@ -287,6 +294,27 @@ hard to learn from a handful of events per athlete.
 ![Curves](reports/figures/roc_pr_calibration.png)
 ![SHAP](reports/figures/shap_importance.png)
 
+## Player database, injury records & prevention
+
+The demo ships a **fictional** player database layered on the synthetic workload data: 100
+named players across four fictional clubs with bios (number, nationality, height, weight,
+preferred foot), generated kit-coloured portraits (real photos can be dropped in), season and
+career statistics, and a **clinical injury record** for every absence — diagnosis, body region,
+side, mechanism, time-loss severity (Fuller et al., 2006) and early/late recurrence — shown as an
+injury log, a front/back body map and a league injury report. Fictional names avoid attaching
+synthetic health data or risk scores to real people; see [`docs/data.md`](docs/data.md) for how
+to load your own (consented) data.
+
+**No diagnosis.** Diagnoses are displayed as recorded by medical staff; the system never infers
+a diagnosis. **Prevention** (`src/clinical/prevention.py`) uses transparent rules that match the
+player's current workload pattern (e.g. sprint distance +126 % vs personal baseline, no rest day
+in 7 days, 9 days since return) and recorded history (previous hamstring, groin, ankle,
+concussion, recurrences) to evidence-based measures — e.g. Nordic hamstring programme (van Dyk et
+al., 2019), Copenhagen adduction programme (Harøy et al., 2019), proprioceptive training after
+ankle sprain (Hupperets et al., 2009), FIFA 11+ (Soligard et al., 2008), criteria-based return to
+play (Ardern et al., 2016) — each with the athlete-specific trigger, concrete actions and full
+citations, and framed as decision support for qualified staff.
+
 ## Explainability
 
 Every prediction returns SHAP-based **risk-increasing** and **protective** factors rendered with
@@ -362,6 +390,9 @@ FastAPI with Pydantic request/response models and OpenAPI docs at `/docs`.
 | GET | `/model/info` · `/model/metrics` | lineage, risk-engine config · metrics, model comparison, calibration |
 | GET | `/features` | feature catalogue with definitions and training ranges |
 | GET | `/squad/overview` · `/squad/heatmap` | squad summary · athletes × dates risk matrix |
+| GET | `/players` · `/players/{id}` | player cards · profile with bio, stats, injury summary |
+| GET | `/players/{id}/injuries` · `/players/{id}/prevention` | clinical injury history · prevention recommendations |
+| GET | `/clubs` · `/injury-report` · `/injury-catalogue` | clubs · league injury report · diagnosis taxonomy |
 | GET | `/monitoring/drift` (`/html`) | drift report |
 
 ```bash
@@ -437,7 +468,7 @@ to panic-retrain.
 
 ## Testing
 
-`pytest` — 98 tests (≈ 45 s) on a small generated dataset:
+`pytest` — 121 tests (≈ 45 s) on a small generated dataset:
 
 * **workload maths**: rolling windows, coupled/uncoupled/EWMA ACWR, monotony, strain, edge cases
 * **features**: rest/consecutive days, baselines (lagged, absence-aware), burn-in, fixtures
@@ -493,6 +524,7 @@ and calibration with every prediction, and is transparent about its synthetic or
 │   ├── risk/               risk engine
 │   ├── simulation/         what-if engine
 │   ├── monitoring/         drift & performance monitoring
+│   ├── clinical/           injury taxonomy & records, roster/injury report, prevention rules
 │   └── service.py          application service used by API and dashboard
 ├── training/               train.py, evaluate.py, experiments/
 ├── scripts/                export_static.py (Netlify data), serve_web.py (local preview)

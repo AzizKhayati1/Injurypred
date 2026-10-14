@@ -14,6 +14,10 @@ from datetime import UTC, datetime
 import numpy as np
 import pandas as pd
 
+from src.clinical import roster
+from src.clinical.injuries import catalogue_records
+from src.clinical.prevention import DISCLAIMER as PREVENTION_DISCLAIMER
+from src.clinical.prevention import recommend
 from src.config import load_config
 from src.data.repository import Dataset, load_dataset, log_predictions
 from src.explainability.narrative import DISCLAIMER, baseline_comparison, build_factors, summary_sentence
@@ -199,6 +203,78 @@ class RiskService:
                             if results else None,
                             "categories": {c: int((cats == c).sum()) for c in CATEGORIES}},
                 "results": results, "skipped": skipped}
+
+    # ------------------------------------------------------------------ players (bios, injuries, prevention)
+    def _latest_row(self, athlete_id: str) -> pd.Series:
+        return self._row(athlete_id, self.latest_date)
+
+    @json_safe
+    def player_card(self, athlete_id: str) -> dict:
+        """Compact player card: bio, club, availability status, latest risk."""
+        self._check_athlete(athlete_id)
+        bio = roster.player_bio(self.ds, athlete_id, self.latest_date)
+        inj = roster.player_injuries(self.ds, athlete_id, self.latest_date)
+        row = self._latest_row(athlete_id)
+        p = row["risk_probability"]
+        return {**bio, "club": roster.club_records(self.ds)[bio["team_id"]],
+                **roster.availability_status(inj, self.latest_date),
+                "risk_probability": None if pd.isna(p) else round(float(p), 4),
+                "risk_category": None if pd.isna(p) else row["risk_category"],
+                "injuries_last_365d": inj["injuries_last_365d"], "days_lost_last_365d": inj["days_lost_last_365d"]}
+
+    @json_safe
+    def list_players(self, team_id: str | None = None) -> list[dict]:
+        ids = self.ds.athletes["athlete_id"] if not team_id else \
+            self.ds.athletes.loc[self.ds.athletes["team_id"] == team_id, "athlete_id"]
+        return [self.player_card(a) for a in ids]
+
+    @json_safe
+    def player_profile(self, athlete_id: str) -> dict:
+        self._check_athlete(athlete_id)
+        card = self.player_card(athlete_id)
+        return {**card, "stats": roster.player_stats(self.ds, self.cfg, athlete_id, self.latest_date),
+                "injury_summary": {k: v for k, v in self.injury_history(athlete_id).items() if k != "records"},
+                "data_origin": card.get("data_origin", "synthetic")}
+
+    @json_safe
+    def injury_history(self, athlete_id: str) -> dict:
+        self._check_athlete(athlete_id)
+        out = roster.player_injuries(self.ds, athlete_id, self.latest_date)
+        out["note"] = ("Diagnoses are as recorded by medical staff (synthetic in this demo). PlayerLoad-Risk does not "
+                       "diagnose injuries.")
+        return out
+
+    @json_safe
+    def prevention(self, athlete_id: str) -> dict:
+        self._check_athlete(athlete_id)
+        row = self._latest_row(athlete_id)
+        hist = roster.player_injuries(self.ds, athlete_id, self.latest_date)
+        avail = bool(row["available"]) and bool(row["in_season"])
+        cat = row["risk_category"] if avail else None
+        recs = recommend(row if avail else None, hist, self.athletes.loc[athlete_id, "position"], cat,
+                         as_of=self.latest_date)
+        return {"athlete_id": athlete_id, "as_of": _iso(self.latest_date), "risk_category": cat,
+                "recommendations": recs, "disclaimer": PREVENTION_DISCLAIMER}
+
+    @json_safe
+    def clubs(self) -> list[dict]:
+        out = []
+        for t, c in roster.club_records(self.ds).items():
+            day = self.features.xs(self.latest_date, level="date")
+            day = day[day["team_id"] == t]
+            avail = day[day["available"]]
+            out.append({**c, "n_players": int(len(day)), "n_unavailable": int((~day["available"]).sum()),
+                        "mean_risk": round(float(avail["risk_probability"].mean()), 4) if len(avail) else None,
+                        "n_high_risk": int(avail["risk_category"].isin(["HIGH", "VERY_HIGH"]).sum())})
+        return out
+
+    @json_safe
+    def injury_report(self) -> dict:
+        return roster.injury_report(self.ds, self.latest_date)
+
+    @json_safe
+    def injury_catalogue(self) -> list[dict]:
+        return catalogue_records()
 
     # ------------------------------------------------------------------ athlete views
     @json_safe

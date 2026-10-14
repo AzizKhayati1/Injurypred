@@ -40,3 +40,7 @@ export async function liveSimulate(athleteId, scenario) {
   if (!res.ok) throw new Error(body.detail || `API error ${res.status}`);
   return body;
 }
+
+export const getPlayers = () => getJSON("players.json");
+export const getClubs = () => getJSON("clubs.json");
+export const getInjuries = () => getJSON("injuries.json");

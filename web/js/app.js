@@ -3,30 +3,44 @@ import { getMeta } from "./data.js";
 import { navigate, render, route, setNotFound, startRouter } from "./router.js";
 import { fmtDate } from "./ui.js";
 import { aboutView } from "./views/about.js";
-import { athleteView } from "./views/athlete.js";
-import { athletesView } from "./views/athletes.js";
+import { clubView, clubsView } from "./views/clubs.js";
 import { heatmapView } from "./views/heatmap.js";
+import { homeView } from "./views/home.js";
+import { injuriesView } from "./views/injuries.js";
 import { modelView } from "./views/model.js";
 import { notFoundView } from "./views/notfound.js";
+import { playerInjuriesView, playerOverviewView, playerPreventionView } from "./views/player.js";
+import { playersView } from "./views/players.js";
 import { simulatorIndexView, simulatorView } from "./views/simulator.js";
 import { squadView } from "./views/squad.js";
 import { workloadView } from "./views/workload.js";
 
-route("/", async () => navigate("/squad", { replace: true }), "squad");
+const redirect = (to) => async (ctx) => navigate(typeof to === "function" ? to(ctx) : to, { replace: true });
+
+route("/", homeView, "home");
+route("/players", playersView, "players");
+route("/players/:id", playerOverviewView, "players");
+route("/players/:id/injuries", playerInjuriesView, "players");
+route("/players/:id/prevention", playerPreventionView, "players");
+route("/players/:id/workload", workloadView, "players");
+route("/players/:id/simulator", simulatorView, "players");
+route("/clubs", clubsView, "clubs");
+route("/clubs/:id", clubView, "clubs");
+route("/injuries", injuriesView, "injuries");
 route("/squad", squadView, "squad");
-route("/athletes", athletesView, "athletes");
-route("/athletes/:id", athleteView, "athletes");
-route("/athletes/:id/workload", workloadView, "athletes");
 route("/heatmap", heatmapView, "heatmap");
 route("/simulator", simulatorIndexView, "simulator");
-route("/simulator/:id", simulatorView, "simulator");
+route("/simulator/:id", redirect((c) => `/players/${c.params.id}/simulator${location.search}`), "simulator");
 route("/model", modelView, "model");
 route("/about", aboutView, "about");
+// backwards-compatible URLs from the first version of the site
+route("/athletes", redirect("/players"), "players");
+route("/athletes/:id", redirect((c) => `/players/${c.params.id}`), "players");
+route("/athletes/:id/workload", redirect((c) => `/players/${c.params.id}/workload${location.search}`), "players");
 setNotFound(notFoundView);
 
 // ---- theme
-const themeBtn = document.getElementById("theme-btn");
-themeBtn.addEventListener("click", () => {
+document.getElementById("theme-btn").addEventListener("click", () => {
   const dark = document.documentElement.dataset.theme
     ? document.documentElement.dataset.theme === "dark"
     : matchMedia("(prefers-color-scheme: dark)").matches;
@@ -38,23 +52,19 @@ themeBtn.addEventListener("click", () => {
 matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => render(false));
 
 // ---- mobile navigation
-const sidebar = document.getElementById("sidebar");
-const scrim = document.getElementById("scrim");
+const nav = document.getElementById("sitenav");
 const menuBtn = document.getElementById("menu-btn");
 menuBtn.addEventListener("click", () => {
-  const open = !sidebar.classList.contains("open");
-  sidebar.classList.toggle("open", open);
-  scrim.hidden = !open;
+  const open = !nav.classList.contains("open");
+  nav.classList.toggle("open", open);
   menuBtn.setAttribute("aria-expanded", String(open));
 });
-scrim.addEventListener("click", () => menuBtn.click());
-document.addEventListener("keydown", (e) => { if (e.key === "Escape" && sidebar.classList.contains("open")) menuBtn.click(); });
+document.addEventListener("keydown", (e) => { if (e.key === "Escape" && nav.classList.contains("open")) menuBtn.click(); });
 
-// ---- header info
 getMeta().then((m) => {
   document.getElementById("asof").textContent = `Data to ${fmtDate(m.latest_date)}`;
-  document.getElementById("build-info").textContent = `Model ${m.model.model_version} · ${m.model.model_type}`;
+  document.getElementById("build-info").textContent =
+    `Model ${m.model.model_version} (${m.model.model_type}) · exported ${fmtDate(m.generated_at?.slice(0, 10))}`;
 }).catch(() => {});
 
-// Chart.js is loaded with `defer`; module scripts run after deferred classic scripts, so it is ready here.
 startRouter();

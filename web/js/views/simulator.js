@@ -1,29 +1,30 @@
-import { apiUrl, getAthlete, getMeta, getSquad, liveSimulate } from "../data.js";
+import { apiUrl, getAthlete, getMeta, getPlayers, liveSimulate } from "../data.js";
+import { portrait } from "../components.js";
 import { chart, series } from "../charts.js";
 import { navigate } from "../router.js";
 import { CATEGORIES, CAT_VAR, badge, card, esc, fmtDate, kpi, num, pct, riskCell, signed } from "../ui.js";
-import { athleteHeader } from "./athlete.js";
+import { playerCrumbs, playerHero } from "./player.js";
 
 const DIMS = { total_load_pct: "Total load", sprint_load_pct: "Sprint load", hsr_pct: "High-speed running", duration_pct: "Session duration" };
 const DISCLAIMER = "Model simulation only: how the model's statistical estimate responds to a hypothetical change in tomorrow's session. Not causal evidence, not medical advice.";
 
 export async function simulatorIndexView(ctx) {
-  const squad = await getSquad();
+  const { players } = await getPlayers();
   ctx.title("What-if simulator");
   ctx.crumbs([["What-if simulator"]]);
-  const avail = squad.athletes.filter((a) => a.available).sort((a, b) => b.latest_risk_probability - a.latest_risk_probability);
+  const avail = players.filter((a) => a.risk_probability != null).sort((a, b) => b.risk_probability - a.risk_probability);
   ctx.main.innerHTML = `
     <div class="page-head"><div><h1>What-if simulator</h1>
       <p>Pick an available athlete to see how the estimated 7-day risk responds if tomorrow's session is heavier, lighter or replaced by recovery.</p></div>
       <div class="controls"><select id="pick" aria-label="Athlete"><option value="">Choose an athlete…</option>
-        ${avail.map((a) => `<option value="${a.athlete_id}">${a.athlete_id} · ${a.position} · ${a.team_id} · ${pct(a.latest_risk_probability)}</option>`).join("")}</select></div>
+        ${avail.map((a) => `<option value="${a.athlete_id}">${esc(a.name)} · ${a.position} · ${esc(a.club.short_name)} · ${pct(a.risk_probability)}</option>`).join("")}</select></div>
     </div>
     <p class="callout">${DISCLAIMER}</p>
-    <div class="mt">${card("Highest current estimates", `<div class="table-wrap"><table><thead><tr><th>Athlete</th><th>Pos</th><th>Team</th><th class="num">7-day risk</th><th>Category</th><th></th></tr></thead>
-      <tbody>${avail.slice(0, 12).map((a) => `<tr><td><a href="/simulator/${a.athlete_id}" data-link>${a.athlete_id}</a></td><td>${a.position}</td><td>${a.team_id}</td>
-        <td class="num">${riskCell(a.latest_risk_probability)}</td><td>${badge(a.latest_risk_category)}</td>
-        <td><a class="btn" href="/simulator/${a.athlete_id}" data-link>Simulate →</a></td></tr>`).join("")}</tbody></table></div>`, "available athletes")}</div>`;
-  document.getElementById("pick").addEventListener("change", (e) => e.target.value && navigate(`/simulator/${e.target.value}`));
+    <div class="mt">${card("Highest current estimates", `<div class="table-wrap"><table><thead><tr><th>Player</th><th>Pos</th><th>Club</th><th class="num">7-day risk</th><th>Category</th><th></th></tr></thead>
+      <tbody>${avail.slice(0, 12).map((a) => `<tr><td><div class="pcell">${portrait(a, 30)}<a class="nm" href="/players/${a.athlete_id}/simulator" data-link>${esc(a.name)}</a></div></td><td>${a.position}</td><td>${esc(a.club.short_name)}</td>
+        <td class="num">${riskCell(a.risk_probability)}</td><td>${badge(a.risk_category)}</td>
+        <td><a class="btn" href="/players/${a.athlete_id}/simulator" data-link>Simulate →</a></td></tr>`).join("")}</tbody></table></div>`, "available athletes")}</div>`;
+  document.getElementById("pick").addEventListener("change", (e) => e.target.value && navigate(`/players/${e.target.value}/simulator`));
 }
 
 function bars(rows, max) {
@@ -37,11 +38,10 @@ export async function simulatorView(ctx) {
   const [d, meta] = await Promise.all([getAthlete(id), getMeta()]);
   if (ctx.stale()) return;
   const label = Object.fromEntries(meta.features.map((f) => [f.name, f.label]));
-  ctx.title(`${id} · What-if`);
-  ctx.crumbs([["What-if simulator", "/simulator"], [esc(id)]]);
+  playerCrumbs(ctx, d, "What-if");
   const sim = d.simulation;
   if (!sim) {
-    ctx.main.innerHTML = `${athleteHeader(id, d, "whatif")}<p class="callout">${esc(d.prediction?.unavailable_reason || "No simulation available: the athlete is not available on the latest date.")}</p>
+    ctx.main.innerHTML = `${playerHero(d, "simulator")}<p class="callout">${esc(d.prediction?.unavailable_reason || "No simulation available: the athlete is not available on the latest date.")}</p>
       <p class="mt"><a class="btn" href="/simulator" data-link>← Choose another athlete</a></p>`;
     return;
   }
@@ -52,7 +52,7 @@ export async function simulatorView(ctx) {
   const max = Math.max(...rows.map((r) => r.p)) * 1.15;
   const ps = sim.planned_session;
 
-  ctx.main.innerHTML = `${athleteHeader(id, d, "whatif")}
+  ctx.main.innerHTML = `${playerHero(d, "simulator")}
     <p class="callout">${DISCLAIMER}</p>
     <div class="kpis mt">
       ${kpi("Risk today", pct(sim.current_risk.risk_probability), `data up to ${fmtDate(sim.as_of_date)}`)}
@@ -62,7 +62,7 @@ export async function simulatorView(ctx) {
     <div class="grid g-2">
       ${card("Scenario comparison", bars(rows, max), "simulated 7-day risk")}
       ${card("Explore one dimension", `
-        <div class="seg" id="dims">${Object.entries(DIMS).map(([k, v]) => `<a href="/simulator/${id}?dim=${k}" data-link class="${k === dim ? "active" : ""}">${v}</a>`).join("")}</div>
+        <div class="seg" id="dims">${Object.entries(DIMS).map(([k, v]) => `<a href="/players/${id}/simulator?dim=${k}" data-link class="${k === dim ? "active" : ""}">${v}</a>`).join("")}</div>
         <div style="display:flex;align-items:baseline;gap:14px;margin:14px 0 4px">
           <span class="slider-value num" id="sv-risk"></span><span id="sv-delta" class="num"></span><span id="sv-cat"></span>
         </div>

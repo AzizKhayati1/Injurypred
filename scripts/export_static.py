@@ -60,6 +60,23 @@ WORKLOAD_COLUMNS = [
 _SVC: RiskService | None = None
 
 
+PHOTO_DIR = PROJECT_ROOT / "web" / "img" / "players"
+
+
+def _photo(card: dict) -> dict:
+    """Use a real photo when one is provided (web/img/players/<id>.jpg|png|webp or a URL in players.csv).
+
+    Only add photos you have the rights to publish. Without one the web app draws a generated portrait.
+    """
+    for ext in ("jpg", "jpeg", "png", "webp"):
+        if (PHOTO_DIR / f"{card['athlete_id']}.{ext}").exists():
+            card["photo"] = f"/img/players/{card['athlete_id']}.{ext}"
+            return card
+    photo = card.get("photo") or ""
+    card["photo"] = photo if photo.startswith(("http://", "https://", "/img/")) else None
+    return card
+
+
 def _write(path: Path, obj) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(clean_json(obj), separators=(",", ":")))
@@ -144,6 +161,9 @@ def export(workers: int = 4) -> None:
         squad["overview"][t] = svc.squad_overview(team_id=t)
     _write(OUT / "squad.json", squad)
     _write(OUT / "heatmap.json", svc.heatmap(start=latest - pd.Timedelta(days=HEATMAP_DAYS - 1)))
+    _write(OUT / "players.json", {"players": [_photo(c) for c in svc.list_players()]})
+    _write(OUT / "clubs.json", {"clubs": svc.clubs()})
+    _write(OUT / "injuries.json", {**svc.injury_report(), "catalogue": svc.injury_catalogue()})
     logger.info("meta/squad/heatmap written (%.1fs)", time.time() - t0)
 
     ids = list(svc.athletes.index)
@@ -164,7 +184,8 @@ def export(workers: int = 4) -> None:
         history = svc.risk_history(aid, start=hist_start)
         workload = svc.workload(aid, start=wl_start)
         _write(OUT / "athletes" / f"{aid}.json", {
-            "profile": svc.athlete_profile(aid), "prediction": pred,
+            "profile": svc.athlete_profile(aid), "player": _photo(svc.player_profile(aid)), "prediction": pred,
+            "injuries": svc.injury_history(aid), "prevention": svc.prevention(aid),
             "risk_history": _columnar(history["history"], ["date", "risk_probability", "risk_category",
                                                            "absence_onset", "available"]),
             "workload": _columnar(workload["days"], WORKLOAD_COLUMNS), "simulation": sims.get(aid)})

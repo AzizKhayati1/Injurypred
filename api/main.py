@@ -13,7 +13,7 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
-from api.routes import athletes, model, monitoring, predictions, simulation, squad
+from api.routes import athletes, model, monitoring, players, predictions, simulation, squad
 from api.schemas import HealthResponse
 from src import __version__
 from src.service import RiskService, ServiceError
@@ -75,5 +75,5 @@ def root():
             "disclaimer": "Statistical availability-risk estimates from workload data; not a medical diagnosis."}
 
 
-for r in (predictions.router, simulation.router, athletes.router, model.router, squad.router, monitoring.router):
+for r in (predictions.router, simulation.router, players.router, athletes.router, model.router, squad.router, monitoring.router):
     app.include_router(r)

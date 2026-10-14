@@ -25,6 +25,9 @@ from src.config import load_config
 logger = logging.getLogger(__name__)
 
 TABLES = ("athletes", "sessions", "absences", "fixtures")
+# Optional descriptive tables (player bios, clubs, clinical injury details). They are not
+# model inputs and are excluded from the data fingerprint.
+EXTRA_TABLES = ("players", "clubs", "injury_details")
 DATE_COLUMNS = {
     "athletes": ["date_of_birth"],
     "sessions": ["date"],
@@ -39,6 +42,9 @@ class Dataset:
     sessions: pd.DataFrame
     absences: pd.DataFrame
     fixtures: pd.DataFrame
+    players: pd.DataFrame | None = None
+    clubs: pd.DataFrame | None = None
+    injury_details: pd.DataFrame | None = None
 
     @property
     def data_end(self) -> pd.Timestamp:
@@ -65,6 +71,10 @@ class Dataset:
             sessions=self.sessions[self.sessions["athlete_id"].isin(ids)].reset_index(drop=True),
             absences=self.absences[self.absences["athlete_id"].isin(ids)].reset_index(drop=True),
             fixtures=self.fixtures[self.fixtures["team_id"].isin(teams)].reset_index(drop=True),
+            players=None if self.players is None else self.players[self.players["athlete_id"].isin(ids)],
+            clubs=self.clubs,
+            injury_details=None if self.injury_details is None
+            else self.injury_details[self.injury_details["athlete_id"].isin(ids)],
         )
 
     def truncate(self, end) -> Dataset:
@@ -77,8 +87,10 @@ class Dataset:
         end = pd.Timestamp(end)
         ab = self.absences[self.absences["onset_date"] <= end].copy()
         ab.loc[ab["return_date"] > end, "return_date"] = end + pd.Timedelta(days=1)
+        det = None if self.injury_details is None else \
+            self.injury_details[self.injury_details["absence_id"].isin(ab["absence_id"])]
         return Dataset(self.athletes.copy(), self.sessions[self.sessions["date"] <= end].copy(), ab,
-                       self.fixtures.copy())
+                       self.fixtures.copy(), self.players, self.clubs, det)
 
 
 def _parse(df: pd.DataFrame, table: str) -> pd.DataFrame:
@@ -101,6 +113,9 @@ def load_from_csv(directory: str | Path) -> Dataset:
     for t in TABLES:
         p = _csv_path(directory, t)
         frames[t] = _parse(pd.read_csv(p), t) if p.exists() else pd.DataFrame()
+    for t in EXTRA_TABLES:
+        p = _csv_path(directory, t)
+        frames[t] = pd.read_csv(p, keep_default_na=True) if p.exists() else None
     return Dataset(**frames)
 
 
@@ -134,8 +149,10 @@ def database_has_data(engine) -> bool:
 
 
 def seed_database(engine, dataset: Dataset) -> None:
-    for t in TABLES:
+    for t in TABLES + EXTRA_TABLES:
         df = getattr(dataset, t)
+        if df is None:
+            continue
         df.to_sql(t, engine, if_exists="replace", index=False, chunksize=5000, method="multi")
         logger.info("Seeded table %s (%d rows)", t, len(df))
     from sqlalchemy import text
@@ -146,7 +163,11 @@ def seed_database(engine, dataset: Dataset) -> None:
 
 
 def load_from_database(engine) -> Dataset:
+    from sqlalchemy import inspect
+
     frames = {t: _parse(pd.read_sql_table(t, engine), t) for t in TABLES}
+    names = set(inspect(engine).get_table_names())
+    frames.update({t: pd.read_sql_table(t, engine) if t in names else None for t in EXTRA_TABLES})
     return Dataset(**frames)
 
 

@@ -95,3 +95,15 @@ def test_openapi_documents_endpoints(client):
     for p in ("/health", "/predict", "/predict/batch", "/athletes/{athlete_id}", "/athletes/{athlete_id}/risk-history",
               "/athletes/{athlete_id}/workload", "/simulate", "/model/info", "/model/metrics", "/features"):
         assert p in paths
+
+
+@pytest.mark.parametrize("path", ["/players", "/players/{aid}", "/players/{aid}/injuries", "/players/{aid}/prevention",
+                                  "/clubs", "/injury-report", "/injury-catalogue"])
+def test_player_endpoints(client, available_athlete_date, path):
+    aid, _ = available_athlete_date
+    r = client.get(path.format(aid=aid))
+    assert r.status_code == 200, r.text
+
+
+def test_player_endpoint_unknown(client):
+    assert client.get("/players/NOPE/injuries").status_code == 404
